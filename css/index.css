@@ -210,12 +210,26 @@ input {
 	.h100{
 		height: 100px!important;
 	}
+	.img-carousel{
+		width: 100%;
+		margin: 0px auto!important;
+	}
+	.h500{
+		height: 350px;
+	}
 }
 
 @media screen and (max-width:570px){
 	
 	.h100{
 		height: 400px;
+	}
+	.img-carousel{
+		width: 100%;
+		margin: 0px auto!important;
+	}
+	.h500{
+		height: 360px;
 	}
 }
 
