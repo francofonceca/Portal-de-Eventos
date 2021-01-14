@@ -169,6 +169,11 @@ input {
 	border-radius: 0px 0px 20% 0px!important;
 }
 
+.img-carousel{
+	width: 70%;
+	margin: 0px auto!important;
+}
+
 @media screen and (max-width:850px){
 	.h100j{
 		height: 200px;
