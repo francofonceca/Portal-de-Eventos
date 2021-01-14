@@ -26,8 +26,11 @@
 		.h345{height: 340px}
 		.h300{height:300px}
 		.h200{height:230px}
+		.h-200p{height:200px}
 		.h100{height:220px;}
 		.h100j{height:130px;}
+		.h-100p{height: 100px!important;}
+		.h-80{height: 80px!important;}
 		.h-50p{height: 50px!important;}
 .publi{width:80%; height:80%;}
 /******************* COLORES *******************/
@@ -175,6 +178,9 @@ input {
 	margin: 0px auto!important;
 }
 
+.margin-auto{
+	margin:0px auto!important
+}
 @media screen and (max-width:850px){
 	.h100j{
 		height: 200px;
