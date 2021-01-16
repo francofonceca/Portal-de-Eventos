@@ -108,15 +108,21 @@ h6{font-size: 11pt; font-weight: 700; letter-spacing: 0px;}
 .izq{ margin-left:350px; }
 .izq{ margin-left:350px; }
 .mrl{ padding-right: 50px; }
-.img4 {background-image: url(../img/origen3.jpg); background-size: cover; background-position: center;}}
+.img4 {background-image: url(../img/origen3.jpg); background-size: cover; background-position: center;}
 .img3 {background-image: url(../img/origen2.jpg); background-size: cover; background-position: center;}
 .img2 {background-image: url(../img/origen.jpg); background-size: cover; background-position: center;}
 .img1 {background-image: url(../img/image1.jpg); background-size: cover; background-position: center;}
 .koala{background-image: url(../img/Koala.jpg); background-size: cover; background-position: center;}
 .logo12{background-image: url(../img/1-LOGO.png); background-size: cover; background-position: center;}
 .pg{ background-size: cover; background-position: center; height:43px; }
-.flores{background-image: url(../img/gal039.jpg); background-size: cover; background-position: center;}
-
+.flores{
+	background-image: url(../img/gal039.jpg);
+	background-size: cover; 
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
 /*-------------CARGA DE DATOS GRAL-------*/
 /* input{
 	border: 1px solid; padding: 10px; background-color: white!important;  
