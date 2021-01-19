@@ -17,12 +17,13 @@
 /*****************ALTURAS*******************/
 		.h70{top:100px; left:280px;   }
 		.top{margin-top:20px; margin-left:0px;}
+		.top-30{margin-top:30px; margin-left:0px;}
 		.top-200{margin-top:200px!important;margin-left: 0px;}		
 		.bot{margin-left:20px; margin-bottom:0px; }
 		.por{left:70px;}
 		.por2{margin-top:30px;}
 		.h690{height: 550px}
-		.h500{height:550px;}
+		.h500{height:450px;}
 		.h345{height: 340px}
 		.h300{height:300px}
 		.h200{height:230px}
@@ -88,7 +89,7 @@ h6{font-size: 11pt; font-weight: 700; letter-spacing: 0px;}
 .bbrr{border-left: 2px; border-bottom-right-radius:12px;   background-color: rgba(128,128,128,1); color: white;text-align: center}
 .bbrr:hover  {background-color: rgba(77,77,77,1);}
 .bbrr:active  {background-color: rgba(170,143,83,0.6); color: white!important; }
-.btlr {border-top-left-radius: 15px; background-color: rgba(128,128,128,1); color: white; float: left;}
+.btlr {border-top-left-radius: 15px; background-color: transparent; color: white; float: left;}
 
 .p{padding-top: 20px;}
 .pr{position:relative;}
@@ -98,7 +99,7 @@ h6{font-size: 11pt; font-weight: 700; letter-spacing: 0px;}
 .oh{overflow:hidden;}/*controla lo q sucede con el contenido desbordado de nuestro contenedor(en este caso la imagen q esta adentro del contenedor)*/
 .mb10 {margin-bottom: 10px;}
 .cvl {display:flex; justify-content: center; align-items: center;}
-.btlr {padding:10%;border-bottom-right-radius: 15px; background-color: rgba(128,128,128,1); color: white; float: left;}
+.btlr {padding:10%;border-bottom-right-radius: 15px;  background-color: transparent; color: white; float: left;}
 /*---------------LOGOS Y IMAGENES---------------*/
 .logo{
 	height:60px;
@@ -115,14 +116,15 @@ h6{font-size: 11pt; font-weight: 700; letter-spacing: 0px;}
 .koala{background-image: url(../img/Koala.jpg); background-size: cover; background-position: center;}
 .logo12{background-image: url(../img/1-LOGO.png); background-size: cover; background-position: center;}
 .pg{ background-size: cover; background-position: center; height:43px; }
-.flores{
-	background-image: url(../img/gal039.jpg);
+.salon{
+	background-image: url(../img/origen.jpg);
 	background-size: cover; 
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 }
+
 /*-------------CARGA DE DATOS GRAL-------*/
 /* input{
 	border: 1px solid; padding: 10px; background-color: white!important;  
@@ -180,15 +182,38 @@ input {
 	border-radius: 0px 0px 20% 0px!important;
 }
 
-.img-carousel{
-	width: 70%;
-	height: 100%;
+.card{
+	width: 250px!important;
+	height: 300px!important;
 	margin: 0px auto!important;
+	background-image: url(../img/origen.jpg);
+	background-size: cover; 
+	background-position: center;
+	background-size: cover;
 }
 
 .margin-auto{
 	margin:0px auto!important
 }
+.borde{
+	border: 2px solid rgba(170,143,83,0.6);
+	border-radius: 10px;
+}
+
+form input:hover {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(170,143,83,0.6)!important ;
+}
+form input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(170,143,83,0.6)!important ;
+}
+
+.iconos {
+	color: white;
+	font-size: 25px;
+}
+
 @media screen and (max-width:850px){
 	.h100j{
 		height: 200px;
@@ -199,6 +224,10 @@ input {
 	.h100{
 		height: 220px;
 	}
+	.top-30{
+		margin-top:90px!important;
+	}
+
 }
 @media screen and (max-width:720px){
     .md-12, .md-8, .md-4, .md-6, body {width: 100%}
@@ -223,6 +252,9 @@ input {
 	}
 	.h500{
 		height: 350px;
+	}
+	.top-30{
+		margin-top:100px!important;
 	}
 }
 
