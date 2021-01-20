@@ -116,8 +116,8 @@ h6{font-size: 11pt; font-weight: 700; letter-spacing: 0px;}
 .koala{background-image: url(../img/Koala.jpg); background-size: cover; background-position: center;}
 .logo12{background-image: url(../img/1-LOGO.png); background-size: cover; background-position: center;}
 .pg{ background-size: cover; background-position: center; height:43px; }
-.salon{
-	background-image: url(../img/origen.jpg);
+.notas{
+	background-image: url(../img/estancia_la_linda-quintas_y_estancias-buenos_aires-1480012318_grande.jpg);
 	background-size: cover; 
 	background-position: center;
 	background-size: cover;
@@ -182,24 +182,22 @@ input {
 	border-radius: 0px 0px 20% 0px!important;
 }
 
-.card{
-	width: 250px!important;
-	height: 300px!important;
+.card-t{
+	width: 400px!important;
 	margin: 0px auto!important;
-	background-image: url(../img/origen.jpg);
+	/* background-image: url(../img/origen.jpg);
 	background-size: cover; 
 	background-position: center;
 	background-size: cover;
 	-webkit-filter: contrast(200%);
-	filter: contrast(200%);
+	filter: contrast(200%); */
 }
 
 .margin-auto{
 	margin:0px auto!important
 }
 .borde{
-	border: 2px solid rgba(170,143,83,0.6);
-	border-radius: 10px;
+	border: 1px solid rgba(170,143,83,0.6);
 }
 
 form input:hover {
