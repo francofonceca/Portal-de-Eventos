@@ -183,7 +183,7 @@ input {
 }
 
 .card-t{
-	width: 400px!important;
+	width: 460px!important;
 	margin: 0px auto!important;
 	/* background-image: url(../img/origen.jpg);
 	background-size: cover; 
@@ -192,7 +192,10 @@ input {
 	-webkit-filter: contrast(200%);
 	filter: contrast(200%); */
 }
-
+.card-b{
+	width: 96.2%!important;
+	margin: 0px auto!important;
+}
 .margin-auto{
 	margin:0px auto!important
 }
@@ -214,6 +217,12 @@ form input:focus {
 	font-size: 25px;
 }
 
+.img-mini{
+	height: 100px!important;
+	width: 100%;
+}
+
+
 @media screen and (max-width:850px){
 	.h100j{
 		height: 200px;
@@ -226,6 +235,13 @@ form input:focus {
 	}
 	.top-30{
 		margin-top:90px!important;
+	}
+	.img-mini{
+		height: 100px;
+		width: 50%;
+	}
+	.card-t{
+		height: 500px!important;
 	}
 
 }
@@ -256,6 +272,13 @@ form input:focus {
 	.top-30{
 		margin-top:100px!important;
 	}
+	.img-mini{
+		height: 100px;
+		width: 50%;
+	}
+	.card-t{
+		height: 500px!important;
+	}
 }
 
 @media screen and (max-width:570px){
@@ -269,6 +292,13 @@ form input:focus {
 	}
 	.h500{
 		height: 360px;
+	}
+	.card-t{
+		height: 500px!important;
+	}
+	.img-mini{
+		height: 100px;
+		width: auto;
 	}
 }
 
