@@ -243,6 +243,9 @@ form input:focus {
 	.card-t{
 		height: 500px!important;
 	}
+	.card-t{
+		width: 500px!important;
+	}
 
 }
 @media screen and (max-width:720px){
@@ -279,6 +282,9 @@ form input:focus {
 	.card-t{
 		height: 500px!important;
 	}
+	.card-b{
+		height: 500px!important;
+	}
 }
 
 @media screen and (max-width:570px){
@@ -295,10 +301,14 @@ form input:focus {
 	}
 	.card-t{
 		height: 500px!important;
+		width: 400px!important;
 	}
 	.img-mini{
 		height: 100px;
 		width: auto;
+	}
+	.card-b{
+		width: 400px!important;
 	}
 }
 
