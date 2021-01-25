@@ -226,6 +226,21 @@ form input:focus {
 	font-size: 25px;
 }
 
+@media screen and (max-width:1200px){
+	
+	.select-filter{
+		width: 200px;
+	}
+	.bloque{
+		height: 280px;
+	}
+}
+@media screen and (max-width:1000px){
+	
+	.select-filter{
+		width: 170px;
+	}
+}
 @media screen and (max-width:850px){
 	.h100j{
 		height: 200px;
@@ -239,7 +254,20 @@ form input:focus {
 	.top-30{
 		margin-top:90px!important;
 	}
+	.bloque{
+		height: 300px;
+	}
+	.select-filter{
+		width: 170px;
+	}
 
+}
+
+@media screen and (max-width:800px){
+	
+	.bloque{
+		height: 450px;
+	}
 }
 @media screen and (max-width:720px){
     .md-12, .md-8, .md-4, .md-6, body {width: 100%}
@@ -268,6 +296,9 @@ form input:focus {
 	.top-30{
 		margin-top:100px!important;
 	}
+	.bloque{
+		height: 450px;
+	}
 }
 
 @media screen and (max-width:570px){
@@ -281,6 +312,9 @@ form input:focus {
 	}
 	.h500{
 		height: 360px;
+	}
+	.bloque{
+		height: 450px;
 	}
 }
 
