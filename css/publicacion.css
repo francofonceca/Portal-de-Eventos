@@ -201,9 +201,9 @@ input {
 	background-color: gold;
 	opacity: 0.3;
 }
-.card{
+.img-fondo{
 	width: 100%!important;
-	height: 400px!important;
+	height: 150px!important;
 	background-image: url(../img/origen.jpg);
 	background-size: cover; 
 	background-position: center;
@@ -215,6 +215,10 @@ input {
 }
 .borde{
 	border: 2px solid rgba(170,143,83,0.6);
+}
+.borde-bloque{
+	background-color: rgba(170,143,83,1);
+	height: 100px;
 }
 .bloque{
 	height: 220px;
