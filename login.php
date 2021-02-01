@@ -71,13 +71,4 @@ if (isset($_POST)) {
         </form>
     </div>
 </div>
-
-<br>
-<br>
-<div class="oro60">
-    <hr>
-    </hr>
-</div>
-
-
 <? include_once('includes/footer.php'); ?>

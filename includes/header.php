@@ -18,7 +18,9 @@
         <!-- HEADER -->
         <div class="col-lg-12 col-md-12  fila p-2">
             <div class=" a1 ">
-                <img src="img/1-LOGO.png" width="100%">
+                <a href="index.php">
+                    <img src="img/1-LOGO.png" width="100%">
+                </a>
             </div>
             <div class=" b3 fila">
                 <div class=" a1 centrar toro">CATEGORIAS</div>

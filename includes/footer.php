@@ -1,22 +1,31 @@
+<br>
+<br>
+
+<div class="oro60">
+    <hr>
+    </hr>
+</div>
 <!-- FOOTER -->
 <div class="container">
     <div class="col-lg-12 text-center">
         <div class="col-lg-4">
-            <div class=" a01 "><img src="img/1-LOGO.png" width="100%"></div>
+            <a href="index.php">
+                <div class=" a01 "><img src="img/1-LOGO.png" width="100%"></div>
+            </a>
         </div>
     </div>
     <div class="row  col-12 ms-md-auto ">
         <div class="col-lg-2 col-md-6 toro text-left sub14">
             <p>CATEGORIAS
-                <P>SALONES
-                    <P>IMAGEN PERSONAL
-                        <P>CONTACTO
+            <P>SALONES
+            <P>IMAGEN PERSONAL
+            <P>CONTACTO
         </div>
         <div class="col-lg-3 col-md-6 toro text-left sub14">
             <p>AVISOS LEGALES
-                <P>TERMINOS Y CONDICIONES
-                    <P>TRABAJÁ CON NOSOTROS
-                        <P>ANUNCIÁ EN EL PORTAL
+            <P>TERMINOS Y CONDICIONES
+            <P>TRABAJÁ CON NOSOTROS
+            <P>ANUNCIÁ EN EL PORTAL
         </div>
         <div class="col-lg-4 col-md-12 text-center margin-auto">
             <h5 class="por toro ">Newsletter y promociones</h5>

@@ -29,16 +29,16 @@
             <div class="a0"></div>
             <div class="a1 centrar">NUEVA BUSQUEDA</div>
             <div class="a1 centrar"><select>
-					<option>Zona: ejemplo San Miguel</option>
-					<option value="tortuguitas">Tortuguitas</option>
-					<option value="Del Viso">Del Viso</option>
-					</select>
+                    <option>Zona: ejemplo San Miguel</option>
+                    <option value="tortuguitas">Tortuguitas</option>
+                    <option value="Del Viso">Del Viso</option>
+                </select>
             </div>
             <div class="a1 centrar"><select>
-						<option>Zona: ejemplo San Miguel</option>
-						<option value="tortuguitas">Tortuguitas</option>
-						<option value="Del Viso">Del Viso</option>
-						</select>
+                    <option>Zona: ejemplo San Miguel</option>
+                    <option value="tortuguitas">Tortuguitas</option>
+                    <option value="Del Viso">Del Viso</option>
+                </select>
             </div>
         </div>
         <div class="centrar h500 oh flores">
@@ -51,29 +51,29 @@
             <div class="col-6 h345 fl blanco">
                 <div class="col-3 h300  fteli flores blanco"></div>
                 <p>
-                    <h4 class="sub16 toro bot">evento empresarial</h4>
-                    <br>
+                <h4 class="sub16 toro bot">evento empresarial</h4>
+                <br>
 
-                    <p>
-                        <h3 class="toro bot">PLANIFICAR EN 2HS</h3>
-                    </p>
-                    <br>
-                    <h6>
-                        <p class="bot  textgris">Te contamos todo de los detalles de la organización</p>
-                    </h6>
-                    <p class="bot col-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco...
+                <p>
+                <h3 class="toro bot">PLANIFICAR EN 2HS</h3>
+                </p>
+                <br>
+                <h6>
+                    <p class="bot  textgris">Te contamos todo de los detalles de la organización</p>
+                </h6>
+                <p class="bot col-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco...
             </div>
             <div class="col-6 h345 blanco fl ">
                 <div class="col-3 h300  fteli flores blanco"></div>
                 <p>
-                    <h6 class="sub16 toro bot">las abuelas tambien festejan</h6>
-                    <p>
-                        <h3 class="toro bot">MERIENDAS .SXXI</H3>
-                    </p>
-                    <h6>
-                        <p class="bot  textgris">Te contamos todo de los detalles de la organización</p>
-                    </h6>
-                    <p class="bot col-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco...
+                <h6 class="sub16 toro bot">las abuelas tambien festejan</h6>
+                <p>
+                <h3 class="toro bot">MERIENDAS .SXXI</H3>
+                </p>
+                <h6>
+                    <p class="bot  textgris">Te contamos todo de los detalles de la organización</p>
+                </h6>
+                <p class="bot col-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco...
 
             </div>
             <br>
@@ -82,15 +82,15 @@
         <div class="col-9 h200 blanco ma center">
             <div class=" col-6 h100 fl blanco">
                 <p>
-                    <h6 class="sub13 toro bot">Jorgelina López nos regala varios consejos</h6>
-                    <p>
-                        <h4 class="sub13 toro bot">Tips para una reunión exitosa</h4>
-                    </p>
-                    <p class="bot col-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco...
-                        <br>
-                        <p>
-                            <h4 class="sub13 bot">SEGUIR LEYENDO</h4>
-                        </p>
+                <h6 class="sub13 toro bot">Jorgelina López nos regala varios consejos</h6>
+                <p>
+                <h4 class="sub13 toro bot">Tips para una reunión exitosa</h4>
+                </p>
+                <p class="bot col-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco...
+                    <br>
+                <p>
+                <h4 class="sub13 bot">SEGUIR LEYENDO</h4>
+                </p>
             </div>
             <div class=" col-6 h100 fl blanco">
                 <div class="col-3 h300  boda"></div>
