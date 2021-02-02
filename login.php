@@ -1,11 +1,14 @@
-<? $title='Inicio de Sesión';$file='login';?>
+<? $title='Inicio de Sesión';$file='login';$verify = true;?>
 
 <? include_once('includes/header.php'); ?>
 
 <?php
 
-if (isset($_POST)) {
-    if (isset($_POST['email']) && isset($_POST['password'])) {
+if (isset($_POST) && count($_POST) == 2) {
+    //Si es true permite el login
+    $email = (isset($_POST['email']) && strlen($_POST['email']) > 0);
+    $password = (isset($_POST['password']) && strlen($_POST['password']) > 0);
+    if ($email && $password) {
         if (strlen($_POST['password']) >= 4 && strlen($_POST['password']) <= 100) {
             $email = clean($_POST['email']);
             $password = clean($_POST['password']);
@@ -13,14 +16,16 @@ if (isset($_POST)) {
                     WHERE
                         `Email`       = ' . $email;
             if (Existe($sql)) {
-                redirect('index');
-            }else{
+                $user = Consulta($sql);
+                var_dump($user);
+                //redirect('index');
+            } else {
                 $error = "El usuario no está registrado";
             }
         } else {
             $error = "El largo de su contraseña es incorrecto, debe ser entre 4 y 100 dígitos";
         }
-    } elseif (isset($_POST['email'])) {
+    } elseif (!$email) {
         $error = "Falta el email";
     } else {
         $error = "Falta la contraseña";
@@ -44,9 +49,8 @@ if (isset($_POST)) {
     <div class="col-12 text-center pb-5">
         <h2> No te pierdas nuestras promociones, inicia sesión y enterate de todo lo que tenemos para ofrecerte.</h2>
     </div>
-<!-- ERROR -->
-<h2><?=isset($error)?$error:''?></h2>
-<!-- ERROR -->
+
+    <? include_once('includes/error.php'); ?>
 
     <div class="col-lg-5 col-md-6 col-sm-10 margin-auto">
         <form action="login.php" method="POST">
