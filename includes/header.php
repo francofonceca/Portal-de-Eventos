@@ -1,4 +1,12 @@
 <?include_once('connect.php'); ?>
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+if (isset($verify) && isset($_SESSION['name']) && isset($_SESSION['surname']) && isset($_SESSION['email'])) {
+    header('Location:index.php');
+}
+?>
 <!DOCTYPE html>
 
 <html lang="en">
