@@ -139,7 +139,14 @@ input[type="submit"] {
 	width:120px;
 	background-color: rgba(128,128,128,1);
 } */
-
+.notas{
+	background-image: url(../img/estancia_la_linda-quintas_y_estancias-buenos_aires-1480012318_grande.jpg);
+	background-size: cover; 
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
 /*------------------------CENTRAR ELEMENTO VERTIAL Y HORIZONTALMENTE------------------------*/
 	.centrar{ 
 		display:flex;
@@ -218,7 +225,6 @@ input {
 }
 .borde-bloque{
 	background-color: rgba(170,143,83,1);
-	height: 100px;
 }
 .bloque{
 	height: 220px;
@@ -239,6 +245,12 @@ form input:focus {
 .width40{
 	width: 40%;
 }
+
+.iframe{
+	width:620px;
+	height: 250px
+}
+
 @media screen and (max-width:1200px){
 	
 	.select-filter{
@@ -247,11 +259,19 @@ form input:focus {
 	.bloque{
 		height: 280px;
 	}
+	.iframe{
+		width:500px;
+		height: 250px
+	}
 }
 @media screen and (max-width:1000px){
 	
 	.select-filter{
 		width: 170px;
+	}
+	.iframe{
+		width:500px;
+		height: 250px
 	}
 }
 @media screen and (max-width:850px){
@@ -273,6 +293,10 @@ form input:focus {
 	.select-filter{
 		width: 170px;
 	}
+	.iframe{
+		width:550px;
+		height: 250px
+	}
 
 }
 
@@ -280,6 +304,10 @@ form input:focus {
 	
 	.bloque{
 		height: 450px;
+	}
+	.iframe{
+		width:400px;
+		height: 250px
 	}
 }
 @media screen and (max-width:720px){
@@ -313,6 +341,10 @@ form input:focus {
 	.bloque{
 		height: 450px;
 	}
+	.iframe{
+		width:400px;
+		height: 250px
+	}
 }
 
 @media screen and (max-width:570px){
@@ -329,6 +361,10 @@ form input:focus {
 	}
 	.bloque{
 		height: 450px;
+	}
+	.iframe{
+		width:350px;
+		height: 250px
 	}
 }
 
