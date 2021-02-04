@@ -87,8 +87,10 @@ h6{font-size: 12pt!important; font-weight: 700; letter-spacing: 0px;}
 .md-8 {width: 66.6%;float: left; padding: 20px;}
 .md-6 {width: 50%;float: left;} 
 .md-4 {width: 33.3%; float: left;padding: 10px}
-.bbrr{border-left: 2px; border-bottom-right-radius:12px;   background-color: rgba(128,128,128,1); color: white;text-align: center}
-.bbrr:hover  {background-color: rgba(77,77,77,1);}
+.bbrr{border-left: 2px; border-bottom-right-radius:12px!important; background-color: rgba(77,77,77,1); color: white;text-align: center}
+.bbrrI{border-right: 2px; border-top-left-radius:12px!important;background-color: rgba(77,77,77,1);text-align: center}
+.bbrr:hover  {background-color: rgba(170,143,83,0.6);}
+.bbrrI:hover  {background-color: rgba(170,143,83,0.6);}
 .bbrr:active  {background-color: rgba(170,143,83,0.6); color: white!important; }
 .btlr {border-top-left-radius: 15px; background-color: transparent; color: white; float: left;}
 
@@ -200,7 +202,7 @@ input {
 .btn-tam{
 	height: 35px!important;
 	width: 200px!important;
-	border-radius: 0px 0px 20% 0px!important;
+	/* border-radius: 0px 0px 20% 0px!important; */
 }
 .card-color{
 	height: 490px;

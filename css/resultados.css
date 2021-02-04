@@ -226,6 +226,15 @@ form input:focus {
 	font-size: 25px;
 }
 
+.color-click:hover{
+	background-color: rgba(170,143,83,0.6)!important;
+	opacity: 1;
+	cursor: pointer;
+	/* background-image: url(../img/origen.jpg); */
+	color: white!important;
+	transition: 0.1s;
+}
+
 @media screen and (max-width:1200px){
 	
 	.select-filter{
