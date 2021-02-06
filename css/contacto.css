@@ -19,6 +19,7 @@
 		.top{margin-top:20px; margin-left:0px;}
 		.top-30{margin-top:30px; margin-left:0px;}
 		.top-200{margin-top:200px!important;margin-left: 0px;}		
+		.top-100{margin-top:100px!important;margin-left: 0px;}		
 		.bot{margin-left:20px; margin-bottom:0px; }
 		.por{left:70px;}
 		.por2{margin-top:30px;}
@@ -45,7 +46,7 @@ body{color: dimgray; padding: 0; width: 100%; margin: auto; }
 .gris2 {background-color: rgba(77,77,77,1); color: white!important;}
 .toro {color: rgba(170,143,83,1)!important;}
 .textgris {color:rgba(84, 83, 82  ,1)!important;}
-.blanco {border: solid 2px rgba(170,143,83,1); background-color:white}
+/* .blanco {border: solid 2px rgba(170,143,83,1); background-color:white} */
 .rojo{ border:solid 20px rgba(170,143,83,1);	background-color:red}
 
 .oh{
@@ -64,7 +65,7 @@ h2{font-size: 27pt; font-weight: 400; letter-spacing: 5px;}
 h3{font-size: 24pt; font-weight: 400; letter-spacing: 1px;}
 h4{font-size: 20pt; font-weight: 500; letter-spacing: 0px;}
 h5{font-size: 16pt; font-weight: 500; letter-spacing: 0px;}
-h6{font-size: 14pt!important; font-weight: 700; letter-spacing: 0px;}
+h6{font-size: 12pt!important; font-weight: 700; letter-spacing: 0px;}
 .boton{font-size: 12pt; font-weight: 400; text-transform: uppercase; color: white; letter-spacing: 2px;}
 .sub16{font-size: 16pt; font-weight: 400; letter-spacing: 5px;}
 /******************* TEXTO / BOTONES / ANOTACIONES *******************/
@@ -86,8 +87,10 @@ h6{font-size: 14pt!important; font-weight: 700; letter-spacing: 0px;}
 .md-8 {width: 66.6%;float: left; padding: 20px;}
 .md-6 {width: 50%;float: left;} 
 .md-4 {width: 33.3%; float: left;padding: 10px}
-.bbrr{border-left: 2px; border-bottom-right-radius:12px;   background-color: rgba(128,128,128,1); color: white;text-align: center}
-.bbrr:hover  {background-color: rgba(77,77,77,1);}
+.bbrr{border-left: 2px; border-bottom-right-radius:12px!important; background-color: rgba(77,77,77,1); color: white;text-align: center}
+.bbrrI{border-right: 2px; border-top-left-radius:12px!important;background-color: rgba(77,77,77,1);text-align: center}
+.bbrr:hover  {background-color: rgba(170,143,83,0.6);}
+.bbrrI:hover  {background-color: rgba(170,143,83,0.6);}
 .bbrr:active  {background-color: rgba(170,143,83,0.6); color: white!important; }
 .btlr {border-top-left-radius: 15px; background-color: transparent; color: white; float: left;}
 
@@ -117,12 +120,18 @@ h6{font-size: 14pt!important; font-weight: 700; letter-spacing: 0px;}
 .logo12{background-image: url(../img/1-LOGO.png); background-size: cover; background-position: center;}
 .pg{ background-size: cover; background-position: center; height:43px; }
 .salon{
-	background-image: url(../img/origen.jpg);
+	background-image: url(../img/celular.jpg);
 	background-size: cover; 
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
+}
+.fondo{
+	background-image: url(../img/origen.jpg);
+	background-size: cover; 
+	background-position: center;
+
 }
 
 /*-------------CARGA DE DATOS GRAL-------*/
@@ -181,45 +190,68 @@ select {
 }
 
 input {
-	width:250px; 
-	height:35px;
+	width:80%; 
+	height:38px;
+	border-color: 0.5px rgba(170,143,83,0.6);
 }
-
+.bot-gris{
+	border-bottom: 2px solid gray;
+}
+.bot-gold{
+	border-bottom: 2px solid rgba(170,143,83,0.6);
+}
 .btn-tam{
 	height: 35px!important;
 	width: 200px!important;
-	border-radius: 0px 0px 20% 0px!important;
+	/* border-radius: 0px 0px 20% 0px!important; */
 }
-
-.card{
-	width: 250px!important;
-	height: 300px!important;
-	margin: 0px auto!important;
+.card-color{
+	height: 490px;
+	background-color: gold;
+	opacity: 0.3;
+}
+.img-fondo{
+	width: 100%!important;
+	height: 150px!important;
 	background-image: url(../img/origen.jpg);
 	background-size: cover; 
 	background-position: center;
 	background-size: cover;
-	-webkit-filter: contrast(200%);
-	filter: contrast(200%);
 }
 
+.blanco a{
+	color: white!important;
+}
+
+.blanco:checked{
+	background-color: white;
+	color: rgba(170,143,83,0.6)!important;
+}
+
+.blanco:hover{
+	background-color: white;
+}
+.blanco:hover> a{
+	color: rgba(170,143,83,1)  !important;
+}
 .margin-auto{
 	margin:0px auto!important
 }
-
 .borde{
 	border: 2px solid rgba(170,143,83,0.6);
 }
-
-.bloque{
-	height: 220px;
+.borde-bloque{
+	background-color: rgba(170,143,83,1);
 }
-
+.bloque{
+	border: 1px solid rgba(170,143,83,1);
+	background-color:  rgba(170,143,83,1);
+	color: white!important;
+}
 form input:hover {
     outline: 0;
     box-shadow: 0 0 0 0.1rem rgba(170,143,83,0.6)!important ;
 }
-
 form input:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(170,143,83,0.6)!important ;
@@ -229,14 +261,13 @@ form input:focus {
 	color: white;
 	font-size: 25px;
 }
+.width40{
+	width: 40%;
+}
 
-.color-click:hover{
-	background-color: rgba(170,143,83,0.6)!important;
-	opacity: 1;
-	cursor: pointer;
-	/* background-image: url(../img/origen.jpg); */
-	color: white!important;
-	transition: 0.1s;
+.iframe{
+	width:620px;
+	height: 250px
 }
 
 @media screen and (max-width:1200px){
@@ -247,15 +278,21 @@ form input:focus {
 	.bloque{
 		height: 280px;
 	}
+	.iframe{
+		width:500px;
+		height: 250px
+	}
 }
-
 @media screen and (max-width:1000px){
 	
 	.select-filter{
 		width: 170px;
 	}
+	.iframe{
+		width:500px;
+		height: 250px
+	}
 }
-
 @media screen and (max-width:850px){
 	.h100j{
 		height: 200px;
@@ -275,6 +312,10 @@ form input:focus {
 	.select-filter{
 		width: 170px;
 	}
+	.iframe{
+		width:550px;
+		height: 250px
+	}
 
 }
 
@@ -283,8 +324,11 @@ form input:focus {
 	.bloque{
 		height: 450px;
 	}
+	.iframe{
+		width:400px;
+		height: 250px
+	}
 }
-
 @media screen and (max-width:720px){
     .md-12, .md-8, .md-4, .md-6, body {width: 100%}
 	
@@ -308,12 +352,17 @@ form input:focus {
 	}
 	.h500{
 		height: 350px;
+
 	}
 	.top-30{
 		margin-top:100px!important;
 	}
 	.bloque{
 		height: 450px;
+	}
+	.iframe{
+		width:400px;
+		height: 250px
 	}
 }
 
@@ -332,4 +381,9 @@ form input:focus {
 	.bloque{
 		height: 450px;
 	}
+	.iframe{
+		width:350px;
+		height: 250px
+	}
 }
+
