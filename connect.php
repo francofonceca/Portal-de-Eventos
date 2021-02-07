@@ -51,7 +51,7 @@ function DELETE($tabla, $donde)
 function Consulta($sql)
 {
     if ($lookup = $GLOBALS['db']->query($sql)) {
-        print $lookup->fetchAll();
+        return $lookup->fetchall()[0];
     } else {
         print ERROR;
     }

@@ -12,13 +12,19 @@ if (isset($_POST) && count($_POST) == 2) {
         if (strlen($_POST['password']) >= 4 && strlen($_POST['password']) <= 100) {
             $email = clean($_POST['email']);
             $password = clean($_POST['password']);
-            $sql = 'SELECT "Password" FROM ' . $tables['users'] . '
+            $sql = 'SELECT * FROM ' . $tables['users'] . '
                     WHERE
                         `Email`       = ' . $email;
             if (Existe($sql)) {
                 $user = Consulta($sql);
-                var_dump($user);
-                //redirect('index');
+                if (password_verify($password, $user['Password'])) {
+                    $_SESSION['name'] = $user['Name'];
+                    $_SESSION['surname'] = $user['Surname'];
+                    $_SESSION['email'] = $user['Email'];
+                    redirect('index');
+                }else{
+                    $error = "Contraseña incorrecta";
+                }
             } else {
                 $error = "El usuario no está registrado";
             }
@@ -30,6 +36,8 @@ if (isset($_POST) && count($_POST) == 2) {
     } else {
         $error = "Falta la contraseña";
     }
+    $email = clean($_POST['email']);
+    $password = clean($_POST['password']);
 }
 
 ?>

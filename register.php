@@ -58,6 +58,11 @@ if (isset($_POST) && count($_POST) == 6) {
     } else {
         $error = "Hay que repetir la contraseña para confirmar";
     }
+    $name = clean($_POST['name']);
+    $surname = clean($_POST['surname']);
+    $phone = clean($_POST['phone']);
+    $email = clean($_POST['email']);
+    $password = clean($_POST['password']);
 }
 
 ?>
