@@ -1,0 +1,198 @@
+<? $title='Publicacion';$file='publicacion';?>
+
+<? include_once('includes/header.php'); ?>
+
+
+
+<? include_once('includes/search.php'); ?>
+<div class="container">
+    <div class="row">
+        <h5 class="textgris">HOME / ZONA NORTE GBA / RESULTADOS</h5>
+    </div>
+    <div class="row h500 card centrar ">
+        <div class="col-lg-12 col-md-12 col-sm-12 oro60 ">
+            <h2 class="text-center top-100">ESTANCIA LA LINDA</h2>
+            <h3 class="text-center top-30">DONDE LA NATURALEZA Y LA EXELENCIA SE UNEN</h3>
+            <br>
+            <br>
+            <br>
+            <p class="text-center pt-5">OLDEN 4561, TORTUGUITAS, ZONA NORTE GBA</p>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-lg-8 col-md-12 col-sm-12 pb-3">
+            <h1 class="text-left bot-gris">Estancia La Linda</h1>
+            <p>Si buscas diferenciarte al decidir por un evento social o empresarial, y querés que se distinga por su excelencia en el servicio… Estancia La Linda es eso y mucho más… Ubicada en la localidad de Tortuguitas a tan solo 20 minutos
+                de capital y con fácil acceso. Al llegar quedaras impactado con su frondoso parque de 17.000 m2 y su casco estilo campo con capacidad para 200 invitados, (con la opción de anexar una carpa para más cantidad de invitados (250-350)
+                siguiendo con el formato de la estancia), gran piscina con solárium y suite privada para novios. Sin olvidarnos de tu tranquilidad, contamos con seguridad privada, estacionamiento dentro del predio y grupo electrógeno. Sí todavía
+                te quedan dudas, vení e impactate conociéndola!! Estancia La Linda es el lugar donde cualquiera sea tu necesidad, te garantizamos, será superada.</p>
+            <div class="borde">
+                <h4 class="text-left p-2">Sobre el lugar</h4>
+                <div class="p-2 ">
+                    <table class="table">
+                        <tr class="bot-gold">
+                            <td class="h6 width40">Capacidad de invitados</td>
+                            <td>Desde 100 hasta 350 personas</td>
+                        </tr>
+                        <tr class="bot-gold">
+                            <td class="h6 width40">Ubicación del Salón</td>
+                            <td>A las afueras de la ciudad hasta 20 km.</td>
+                        </tr>
+                        <tr class="bot-gold">
+                            <td class="h6 width40">Espacios con los que cuenta el Salón</td>
+                            <td>Salón / Foyer / Pista de baile / Estacionamiento / Jardín / Pileta / Carpa / Habitación para Novios - Familiares</td>
+                        </tr>
+                        <tr class="bot-gold">
+                            <td class="h6 width40">Servicios que ofrece</td>
+                            <td>Catering / Bebidas / Barra de tragos / Ceremonia / Disc Jockey / Ambientación / Livings</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="text-left p-2">
+                    <h6> - Promociones acordes a tu evento</h6>
+                    <h6> - El horario de comienzo de tu casamiento LO ELEGÍS VOS y sin costo adicional!</h6>
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner p-5">
+                            <div class="carousel-item active">
+                                <div class="row ">
+                                    <div class="col-lg-3">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="bg-secondary py-5 text-white text-center img-fondo"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon oro60" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon oro60" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
+                        </a>
+                    </div>
+                    <div class="px-5">
+                        <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.4021849616765!2d-58.75955073477395!3d-34.46732023049496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94a8fb89edd6f2e!2sEscuela%20de%20Educaci%C3%B3n%20Media%20N.%C2%BA%207%20Roberto%20Arlt!5e0!3m2!1ses-419!2sar!4v1611789529825!5m2!1ses-419!2sar" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+
+            </div>
+            <div class="borde-bloque pb-2">
+                <div class="container">
+                    <div class="row text-white">
+                        <div class="col-lg-4 col-md-4 text-center">
+                            <h5>Contacto directo.</h5>
+                            <h6><i class="bi bi-whatsapp"></i> Fiorella: +5412341231</h6>
+                            <h6><i class="bi bi-whatsapp"></i> Mercedes: +5412341231</h6>
+                        </div>
+                        <div class="col-lg-4 col-md-4 text-center">
+                            <h5 style="opacity: 0;">Texto oculto.</h5>
+                            <h6><i class="bi bi-envelope-fill"></i> fio_estancia@gmail.com</h6>
+                            <h6><i class="bi bi-envelope-fill"></i> fio_estancia@gmail.com</h6>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 container row pb-1 text-center">
+                            <h4>Sitioweb.com.ar</h4>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <i class="bi bi-geo-alt" style="font-size:35px"></i>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <i class="bi bi-instagram" style="font-size:35px"></i>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <i class="bi bi-facebook" style="font-size:35px"></i>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <i class="bi bi-twitter" style="font-size:35px"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 oro60">
+            <h4 class="text-left">SOLICITAR PRESUPUESTO</h4>
+            <p class="text-left">DATOS DEL EVENTO</p>
+            <form action="">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-calendar-date"></i></span>
+                    <input type="text" class="form-control" placeholder="Fecha del evento DIA/MES/AÑO" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="Cantidad de invitados" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <br>
+                <p class="text-left">DATOS DE CONTACTO</p>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-telephone-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="Telefono" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-envelope-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="Dirección de correo" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group flex-nowrap py-2">
+                    <textarea name="" id="" style="width: 100%;" rows="10" placeholder="Comentarios o sugerencias"></textarea>
+                </div>
+                <div class="input-group flex-nowrap py-2 d-flex">
+                    <button class="bbrr p-1 ml-auto" style="width: 120px;">COTIZAR</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<? include_once('includes/footer.php'); ?>
