@@ -1,4 +1,4 @@
-<? $title='Salones';$file='salones';?>
+<? $title='Salones';$file='salones';$salones = true;?>
 
 <? include_once('includes/header.php'); ?>
 

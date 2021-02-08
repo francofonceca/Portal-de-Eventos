@@ -78,6 +78,9 @@ if (isset($_POST) && count($_POST) == 2) {
                 <button type="submit" class="btn btn-secondary btn-tam">
                     Iniciar
                 </button>
+                <a type="button" class="btn btn-secondary btn-tam" href='register.php'>
+                    Registrarse
+                </a>
             </div>
         </form>
     </div>

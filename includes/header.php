@@ -3,7 +3,8 @@
 if (!isset($_SESSION)) {
     session_start();
 }
-if (isset($verify) && isset($_SESSION['name']) && isset($_SESSION['surname']) && isset($_SESSION['email'])) {
+$logued = isset($_SESSION['name']) && isset($_SESSION['surname']) && isset($_SESSION['email']);
+if (isset($verify) && $logued) {
     header('Location:index.php');
 }
 ?>
@@ -15,6 +16,9 @@ if (isset($verify) && isset($_SESSION['name']) && isset($_SESSION['surname']) &&
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/<?= isset($file) ? $file : 'index' ?>.css">
+    <?php if (isset($salones)) : ?>
+        <link rel="stylesheet" href="css/publicacion.css">
+    <?php endif; ?>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -33,24 +37,35 @@ if (isset($verify) && isset($_SESSION['name']) && isset($_SESSION['surname']) &&
             <div class=" b3 fila">
                 <div class=" a1 centrar toro">CATEGORIAS</div>
                 <div class=" a1 centrar toro">
-                    <div class="dropdown" >
-                            <button class="btn dropdown-toggle boton-desplegable" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="dropdown">
+                        <a <?= !isset($salones) ? ' class=" a1 centrar toro" href="salones.php"' : 'class="btn dropdown-toggle boton-desplegable" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" ' ?>>
                             SALONES
-                            </button>
+                        </a>
+                        <?php if (isset($salones)) : ?>
                             <ul class="dropdown-menu dropdown-menu-dark desplegable" style="background-color: white!important;color: black!important;" aria-labelledby="dropdownMenuButton2">
-                            <li><a class="dropdown-item active desplegable" href="">SALONES DE FIESTA</a></li>
-                            <li><a class="dropdown-item desplegable" href="#">QUINTAS</a></li>
-                            <li><a class="dropdown-item desplegable" href="#">PUBS & RESTÓ</a></li>
-                            <li><a class="dropdown-item desplegable">CLUBES Y SOCIEDADES DE FOMENTO</li>
-                            <li><a class="dropdown-item desplegable" href="#">CAMPOS DEPORTIVOS</a></li>
-                            <li><a class="dropdown-item desplegable" href="#">SALONES INFAN</a></li>
+                                <?php
+                                $salones = getSomething($tables['lounges']);
+                                foreach ($salones as $key => $salon) {
+                                    echo '<li><a class="dropdown-item desplegable" href="#">' . $salon['Lounge'] . '</a></li>';
+                                }
+                                ?>
                             </ul>
-                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
-                <div class=" a1 centrar toro">IMAGEN PERSONAL</div>
-                <div class=" a1 centrar toro">CONTACTO</div>
-                <div class="a1 centrar sub14"><i class="bi bi-arrow-bar-right"></i>EMPRESAS</div>
             </div>
+            <div class=" a1 centrar toro">IMAGEN PERSONAL</div>
+                <a href='contacto.php' class=" a1 centrar toro">
+                    CONTACTO
+                </a>
+            <?php
+            if ($logued) {
+                echo '<a href="logout.php" class=" a1 centrar toro">Cerrar sesión</a>';
+            } else {
+                echo '<a href="login.php" class=" a1 centrar toro">Iniciar sesión</a>';
+            }
+            ?>
+            <div class="a1 centrar sub14"><i class="bi bi-arrow-bar-right"></i>EMPRESAS</div>
         </div>
-        <!-- FIN HEADER -->
+    </div>
+    <!-- FIN HEADER -->

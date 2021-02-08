@@ -21,6 +21,7 @@ $server = array(
 // Tables
 $GLOBALS['tables']= array(
     'users'      => 'portal.users',
+    'lounges'      => 'portal.lounges',
     'categories'      => 'portal.categories',
     'filters'      => 'portal.filters',
     'category_filter'      => 'portal.category_filter',

@@ -128,6 +128,9 @@ if (isset($_POST) && count($_POST) == 6) {
                 <button type="submit" class="btn btn-secondary btn-tam">
                     Registrarse
                 </button>
+                <a type="button" class="btn btn-secondary btn-tam" href='login.php'>
+                    Ya tengo una cuenta!
+                </a>
             </div>
         </form>
     </div>
