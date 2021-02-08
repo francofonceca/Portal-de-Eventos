@@ -19,8 +19,11 @@ $server = array(
 );
 
 // Tables
-$tables = array(
-    'users'      => 'users',
+$GLOBALS['tables']= array(
+    'users'      => 'portal.users',
+    'categories'      => 'portal.categories',
+    'filters'      => 'portal.filters',
+    'category_filter'      => 'portal.category_filter',
 );
 
 // Connection
@@ -51,7 +54,7 @@ function DELETE($tabla, $donde)
 function Consulta($sql)
 {
     if ($lookup = $GLOBALS['db']->query($sql)) {
-        return $lookup->fetchall()[0];
+        return $lookup->fetchall();
     } else {
         print ERROR;
     }
@@ -64,14 +67,4 @@ function Existe($sql)
     return $valor;
 }
 
-
-//Functions
-
-
-function clean($dato)
-{
-    return $GLOBALS['db']->quote($dato);
-}
-function redirect($page){
-    header("Location:$page.php");
-}
+include_once('functions.php');

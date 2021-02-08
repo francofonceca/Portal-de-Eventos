@@ -16,7 +16,7 @@ if (isset($_POST) && count($_POST) == 2) {
                     WHERE
                         `Email`       = ' . $email;
             if (Existe($sql)) {
-                $user = Consulta($sql);
+                $user = Consulta($sql)[0];
                 if (password_verify($password, $user['Password'])) {
                     $_SESSION['name'] = $user['Name'];
                     $_SESSION['surname'] = $user['Surname'];
@@ -51,7 +51,6 @@ if (isset($_POST) && count($_POST) == 2) {
 
 <!-- FIN SEARCH BAR -->
 <br>
-
 
 <div class="container py-5 ">
     <div class="col-12 text-center pb-5">
