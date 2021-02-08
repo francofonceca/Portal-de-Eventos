@@ -23,10 +23,3 @@
         <button class="btn btn-secondary " style="border-radius: 50%;"><i class="bi bi-search"></i></button>
     </div>
 </div>
-<!-- <div class="row h500 salon centrar">
-    <div class="col-lg-12 col-md-12 col-sm-12 oro60 h100j ">
-        <h2 class="text-center top-30">SALONES</h2>
-    </div>
-</div> -->
-<!-- FIN SEARCH BAR -->
-<br>

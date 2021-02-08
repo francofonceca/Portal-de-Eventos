@@ -17,13 +17,13 @@
     <div class="row  col-12 ms-md-auto ">
         <div class="col-lg-2 col-md-6 toro text-left sub14">
             <p>CATEGORIAS
-            <P>SALONES
+            <P><a href='salones.php' class="toro">SALONES</a>
             <P>IMAGEN PERSONAL
-            <P>CONTACTO
+            <P><a href='contacto.php' class="toro">CONTACTO</a>
         </div>
         <div class="col-lg-3 col-md-6 toro text-left sub14">
             <p>AVISOS LEGALES
-            <P>TERMINOS Y CONDICIONES
+            <P><a href='terminosycondiciones.php' class="toro">TERMINOS Y CONDICIONES</a>
             <P>TRABAJÁ CON NOSOTROS
             <P>ANUNCIÁ EN EL PORTAL
         </div>

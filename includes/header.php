@@ -46,7 +46,7 @@ if (isset($verify) && $logued) {
                                 <?php
                                 $salones = getSomething($tables['lounges']);
                                 foreach ($salones as $key => $salon) {
-                                    echo '<li><a class="dropdown-item desplegable" href="#">' . $salon['Lounge'] . '</a></li>';
+                                    echo '<li><a class="dropdown-item desplegable" href="#">' . strtoupper($salon['Lounge']) . '</a></li>';
                                 }
                                 ?>
                             </ul>

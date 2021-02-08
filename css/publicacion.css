@@ -691,13 +691,10 @@ form input:focus {
 
 .dropdown-menu-dark,
 .dropdown-item.active,
+.desplegable:hover,
 .desplegable:active {
     background-color: rgba(170, 143, 83, 1)!important;
     color: white!important;
-}
-
-.desplegable:active {
-    background-color: rgba(170, 143, 83, 1)!important;
 }
 
 .desplegable {

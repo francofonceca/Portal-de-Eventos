@@ -189,7 +189,7 @@ select {
 	margin: 4px!important;
 }
 
-input {
+.input-facha {
 	width:80%; 
 	height:38px;
 	border-color: 0.5px rgba(170,143,83,0.6);
@@ -247,6 +247,7 @@ input {
 	border: 1px solid rgba(170,143,83,1);
 	background-color:  rgba(170,143,83,1);
 	color: white!important;
+	height: auto;
 }
 form input:hover {
     outline: 0;
@@ -274,9 +275,6 @@ form input:focus {
 	
 	.select-filter{
 		width: 200px;
-	}
-	.bloque{
-		height: 280px;
 	}
 	.iframe{
 		width:500px;
@@ -306,9 +304,6 @@ form input:focus {
 	.top-30{
 		margin-top:90px!important;
 	}
-	.bloque{
-		height: 300px;
-	}
 	.select-filter{
 		width: 170px;
 	}
@@ -321,9 +316,6 @@ form input:focus {
 
 @media screen and (max-width:800px){
 	
-	.bloque{
-		height: 450px;
-	}
 	.iframe{
 		width:400px;
 		height: 250px
@@ -357,9 +349,6 @@ form input:focus {
 	.top-30{
 		margin-top:100px!important;
 	}
-	.bloque{
-		height: 450px;
-	}
 	.iframe{
 		width:400px;
 		height: 250px
@@ -378,12 +367,23 @@ form input:focus {
 	.h500{
 		height: 360px;
 	}
-	.bloque{
-		height: 450px;
-	}
 	.iframe{
 		width:350px;
 		height: 250px
 	}
 }
 
+::-webkit-file-upload-button {
+	background: transparent;
+	width:80%; 
+	height:38px;
+	border-color: 0.5px rgba(170,143,83,1);
+	color: gray	;
+	width: 100%;
+}
+
+.bloque-busqueda{
+	width: 100%;
+	height: auto;
+	border: 1px solid rgba(170,143,83,1);
+}

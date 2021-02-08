@@ -4,6 +4,11 @@
 
 
 <? include_once('includes/search.php'); ?>
+<div class="row h500 notas centrar">
+    <div class="col-lg-12 col-md-12 col-sm-12 oro60 h100j ">
+        <h1 class="text-center top-30">Ideas & Notas</h1>
+    </div>
+</div>
 
 
 <div class="container">
