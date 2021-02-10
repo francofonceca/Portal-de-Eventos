@@ -225,6 +225,9 @@ input {
 	border: 2px solid rgba(170,143,83,0.6);
 	border-bottom: none!important;
 }
+.borde-full{
+	border: 2px solid rgba(170,143,83,0.6);
+}
 .borde-bloque{
 	background-color: rgba(170,143,83,1);
 }
