@@ -1,71 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/eventos.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:400,700" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <title>Portal de Eventos - Eventos</title>
-</head>
-<body class="pr">
-    <div class="conteiner">
-        <!-- HEADER -->
-        <div class="col-lg-12 col-md-12  fila p-2">
-            <div class=" a1 ">
-                <a href="index.html">
-                    <img src="img/1-LOGO.png" width="100%">
-                </a>
-            </div>
-            <div class=" b3 fila">
-                <div class=" a1 centrar toro">CATEGORIAS</div>
-                <div class=" a1 centrar toro">
-                    <div class="dropdown" >
-                        <button class="btn dropdown-toggle boton-desplegable" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                          SALONES
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark desplegable" style="background-color: white!important;color: black!important;" aria-labelledby="dropdownMenuButton2">
-                          <li><a class="dropdown-item active desplegable" href="#">SALONES DE FIESTA</a></li>
-                          <li><a class="dropdown-item desplegable" href="#">QUINTAS</a></li>
-                          <li><a class="dropdown-item desplegable" href="#">PUBS & RESTÓ</a></li>
-                          <li><a class="dropdown-item desplegable">CLUBES Y SOCIEDADES DE FOMENTO</li>
-                          <li><a class="dropdown-item desplegable" href="#">CAMPOS DEPORTIVOS</a></li>
-                          <li><a class="dropdown-item desplegable" href="#">SALONES INFAN</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class=" a1 centrar toro">IMAGEN PERSONAL</div>
-                <div class=" a1 centrar toro">CONTACTO</div>
-                <div class="a1 centrar sub14"><i class="bi bi-arrow-bar-right"></i>EMPRESAS</div>
-            </div>
-        </div>
-        <!-- FIN HEADER -->
+<? $title='Eventos';$file='eventos';?>
 
-        <!-- SEARCH BAR -->
-        <div class="row col-lg-12 col-md-12 py-3 oro100" style="margin-left: 0px!important;margin-right: 0px!important;">
-            <div class="col-lg-2 col-md-12 text-center" style="margin-top: -8px!important;right: 0px!important;">
-                <i class="bi bi-lightbulb iconos "></i>
-                <i class="bi bi-tags-fill iconos p-2 " ></i>
-                <i class="bi bi-calendar-check iconos "></i>
-            </div>
-            <div class="col-lg-3 col-md-12 text-center">
-                <h4 style="top:20px!important">NUEVA BUSQUEDA:</h4>
-            </div>
-                
-            <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                <select>
-                    <option>Zona: ejemplo San Miguel</option>
-                    <option value="tortuguitas">Tortuguitas</option>
-                    <option value="Del Viso">Del Viso</option>
-                </select>
-                <input type="text" placeholder="¿Qué estás buscando?">
-            </div>
-            <div class="col-lg-1 col-md-12 col-sm-12 text-center">
-                <button class="btn btn-secondary " style="border-radius: 50%;"><i class="bi bi-search"></i></button>
-            </div>
-        </div>
-        <!-- FIN SEARCH BAR -->
+<? include_once('includes/header.php'); ?>
+
+
+<? include_once('includes/search.php'); ?>
         <br>
         <div class="container">
             <div class="row ">
@@ -187,47 +125,5 @@
         
         <div><hr></hr></div>
 
-        <!-- FOOTER -->
-        <div class="container">
-            <div class="col-lg-12 text-center">
-                <div class="col-lg-4">
-                    <div class=" a01 "><img src="img/1-LOGO.png" width="100%"></div>
-                </div>
-            </div>
-            <div class="row  col-12 ms-md-auto ">
-                <div class="col-lg-2 col-md-6 toro text-left sub14">
-                    <p>CATEGORIAS
-                    <P>SALONES
-                    <P>IMAGEN PERSONAL
-                    <P>CONTACTO		
-                </div>
-                <div class="col-lg-3 col-md-6 toro text-left sub14">
-                    <p>AVISOS LEGALES
-                    <P>TERMINOS Y CONDICIONES
-                    <P>TRABAJÁ CON NOSOTROS
-                    <P>ANUNCIÁ EN EL PORTAL
-                </div>
-                <div class="col-lg-4 col-md-12 text-center margin-auto">
-                    <h5 class="por toro ">Newsletter y promociones</h5>
-                    <br>
-                    <input class="toro" type="text" name="" placeholder="Dejanos tu correo y recibí las ulti...">
-                </div>
-                <br>
-                <div class="col-lg-3 centrar">
-                    <form action="#">
-                        <input class="btn btn-secondary btn-tam"  type="submit" name="" value="SUSCRIBIRSE" >
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- FIN FOOTER -->
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+        
+    <? include_once('includes/footer.php'); ?>
