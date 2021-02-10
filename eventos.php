@@ -9,7 +9,7 @@
             <div class="row ">
                  <h5 class="textgris">HOME / EVENTOS </h5>
                  <div ><hr style="height: 2px;"></hr></div>
-                 <div class="col-lg-3">
+                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <select class="select-filter">
                         <option >Ubicación</option>
                         <option value="Tortuguitas">Tortuguitas</option>
@@ -17,7 +17,7 @@
                         <option value="GrandBourg">Grand Bourg</option>
                     </select>
                  </div>
-                 <div class="col-lg-3">
+                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <select class="select-filter">
                         <option>Próximos 30 dias</option>
                         <option value="Tortuguitas">Próximos 15 dias</option>
@@ -25,7 +25,7 @@
                         <option value="GrandBourg">Próximos 3 dias</option>
                     </select>
                  </div>
-                 <div class="col-lg-3">
+                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <select class="select-filter fa">
                         <option >Con barra libre</option>
                         <option value="Tortuguitas">Con decorado gratis</option>
@@ -33,7 +33,7 @@
                         <option value="GrandBourg">Con descuento</option>
                     </select>
                  </div>
-                 <div class="col-lg-3">
+                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <select class="select-filter">
                         <option >Todos los lugares</option>
                         <option value="Tortuguitas">Quintas</option>
@@ -42,7 +42,7 @@
                     </select>
                  </div>
                  <div class="container py-4 px-3 ">
-                    <div class="col-lg-12 p-4 borde">  
+                    <div class="col-lg-12 col-md-12 col-sm-12 p-4 borde">  
                         <div class="h500  salon">
                             <br>
                             <h5 class="text-left p-2 oro100" style="opacity: 0.9; width: 300px; margin-left: -25px!important;" >SÁBADO 16 DE FEBRERO</h5>
@@ -54,7 +54,7 @@
                         <h4 class="py-2 px-4">3k - 5k - 10k - 21k - 42k</h4>
                     </div>
                     <div class="row justify-content-evenly p-3 pb-5">
-                        <div class="col-lg-6 borde-full p-3"> 
+                        <div class="col-lg-6 col-md-6 col-sm-12 borde-full p-3"> 
                             <div class="h100 p-3 salon">
                             </div>
                             <h5 class="text-center oro100 py-2" style="opacity: 0.9; bottom: 0px!important">MARTES 12 DE FEBRERO</h5>
@@ -66,7 +66,7 @@
                                 <h5 class="textgris text-strong"><strong>Pte Perón 2453, Muñiz</strong></h5>
                             </div>
                         </div>
-                        <div class="col-lg-6 borde-full p-3 ">
+                        <div class="col-lg-6 col-md-6 col-sm-12 borde-full p-3 ">
                             <div class="h100 p-3 salon">
                             </div>
                             <h5 class="text-center oro100 py-2" style="opacity: 0.9; bottom: 0px!important">MARTES 12 DE FEBRERO</h5>
@@ -78,7 +78,7 @@
                                 <h5 class="textgris text-strong"><strong>Pte Perón 2453, Muñiz</strong></h5>
                             </div>
                         </div>
-                        <div class="col-lg-4 borde-full p-3 mt-3">
+                        <div class="col-lg-4 col-md-4 col-sm-12 borde-full p-3 mt-3">
                             <div class="h100 p-3 salon">
                             </div>
                             <h5 class="text-center oro100 py-2" style="opacity: 0.9; bottom: 0px!important">MARTES 12 DE FEBRERO</h5>
@@ -90,7 +90,7 @@
                                 <h6 class="textgris text-strong"><strong>Pte Perón 2453, Muñiz</strong></h6>
                             </div>
                         </div>
-                        <div class="col-lg-4 borde-full p-3 mt-3">
+                        <div class="col-lg-4 col-md-4 col-sm-12 borde-full p-3 mt-3">
                             <div class="h100 p-3 salon">
                             </div>
                             <h5 class="text-center oro100 py-2" style="opacity: 0.9; bottom: 0px!important">VIERNES 15 DE FEBRERO</h5>
@@ -102,7 +102,7 @@
                                 <h6 class="textgris text-strong"><strong>Pte Perón 2453, Muñiz</strong></h6>
                             </div>
                         </div>
-                        <div class="col-lg-4 borde-full p-3 mt-3">
+                        <div class="col-lg-4 col-md-4 col-sm-12 borde-full p-3 mt-3">
                             <div class="h100 p-3 salon">
                             </div>
                             <h5 class="text-center oro100 py-2" style="opacity: 0.9; bottom: 0px!important">SABADO 16 DE FEBRERO</h5>
