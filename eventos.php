@@ -124,6 +124,4 @@
         </div>
         
         <div><hr></hr></div>
-
-        
     <? include_once('includes/footer.php'); ?>

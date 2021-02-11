@@ -39,6 +39,11 @@
             </form>
         </div>
     </div>
+    <div class="col-lg-12 text-center toro">
+        <hr>
+        <br>
+        <h4>Numero de grupo 00F1 -Chaparro, Waszczuk, Aguirre</h4>
+    </div>
 </div>
 <!-- FIN FOOTER -->
 </div>
