@@ -1,4 +1,4 @@
-<? $title='Inicio de Sesión';$file='login';$verify = true;?>
+<? $title='Inicio de Sesión';$file='login';$register = true;?>
 
 <? include_once('includes/header.php'); ?>
 
@@ -21,6 +21,7 @@ if (isset($_POST) && count($_POST) == 2) {
                     $_SESSION['name'] = $user['Name'];
                     $_SESSION['surname'] = $user['Surname'];
                     $_SESSION['email'] = $user['Email'];
+                    $_SESSION['phone'] = $user['Phone'];
                     redirect('index');
                 }else{
                     $error = "Contraseña incorrecta";

@@ -11,12 +11,10 @@
         <h4 style="top:20px!important">NUEVA BUSQUEDA:</h4>
     </div>
     
-    <form class="row" method="POST" action="resultados.php">
-        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+    <form class="col-lg-7" method="POST" action="resultados.php">
+        <div class="text-center">
             <?= isset($selectSearch) ? getSelectZone($selectSearch) : getselectZone() ?>
             <input type="text" placeholder="¿Qué estás buscando?" name="search" <?= isset($search) ? 'value="' . $search . '"' : '' ?>>
-        </div>
-        <div class="col-lg-1 col-md-12 col-sm-12 text-center">
             <button type='submit' class="btn btn-secondary " style="border-radius: 50%;"><i class="bi bi-search"></i></button>
         </div>
     </form>

@@ -1,4 +1,4 @@
-<? $title='Registro';$file='register';$verify = true;?>
+<? $title='Registro';$file='register';$register = true;?>
 
 <? include_once('includes/header.php'); ?>
 
@@ -32,6 +32,7 @@ if (isset($_POST) && count($_POST) == 6) {
                         $_SESSION['name'] = $name;
                         $_SESSION['surname'] = $surname;
                         $_SESSION['email'] = $email;
+                        $_SESSION['phone'] = $phone;
                         redirect('index');
                     }else{
                         $error = "Error al registrarse, revise sus datos o contacte al técnico";
@@ -62,7 +63,6 @@ if (isset($_POST) && count($_POST) == 6) {
     $surname = clean($_POST['surname']);
     $phone = clean($_POST['phone']);
     $email = clean($_POST['email']);
-    $password = clean($_POST['password']);
 }
 
 ?>
@@ -125,12 +125,12 @@ if (isset($_POST) && count($_POST) == 6) {
             </div>
             <br>
             <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                <button type="submit" class="btn btn-secondary btn-tam">
-                    Registrarse
-                </button>
                 <a type="button" class="btn btn-secondary btn-tam" href='login.php'>
                     Ya tengo una cuenta!
                 </a>
+                <button type="submit" class="btn btn-secondary btn-tam">
+                    Registrarse
+                </button>
             </div>
         </form>
     </div>
