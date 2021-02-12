@@ -25,6 +25,13 @@ $GLOBALS['tables']= array(
     'categories'      => 'portal.categories',
     'filters'      => 'portal.filters',
     'category_filter'      => 'portal.category_filter',
+    'zones'      => 'portal.zones',
+
+    'posts'      => 'portal.posts',
+    'post_lounge'      => 'portal.post_lounge',
+    'post_category'      => 'portal.post_category',
+    'post_filter'      => 'portal.post_filter',
+    'post_images'      => 'portal.post_images',
 );
 
 // Connection

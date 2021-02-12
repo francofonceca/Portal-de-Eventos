@@ -5,12 +5,12 @@
 <?php
 if (isset($_POST) && count($_POST) == 6) {
     //Si es true permite el Register
-    $name = (isset($_POST['name']) && strlen($_POST['name']) > 0);
-    $surname = (isset($_POST['surname']) && strlen($_POST['surname']) > 0);
-    $phone = (isset($_POST['phone']) && strlen($_POST['phone']) > 0);
-    $email = (isset($_POST['email']) && strlen($_POST['email']) > 0);
-    $password = (isset($_POST['password']) && strlen($_POST['password']) > 0);
-    $passwordAgain = (isset($_POST['passwordAgain']) && strlen($_POST['passwordAgain']) > 0);
+    $name = (verify($_POST['name']));
+    $surname = (verify($_POST['surname']));
+    $phone = (verify($_POST['phone']));
+    $email = (verify($_POST['email']));
+    $password = (verify($_POST['password']));
+    $passwordAgain = (verify($_POST['passwordAgain']));
 
     if ($name && $surname && $email && $phone && $password && $passwordAgain) {
         if ($_POST['password'] == $_POST['passwordAgain']) {

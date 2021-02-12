@@ -1,15 +1,27 @@
+<?php
+if (!(isset($_POST) && isset($_POST['search']) && isset($_POST['selectSearch']) && $_POST['selectSearch'] != '')) {
+    header("Location:index.php");
+}
+?>
 <? $title='Resultados';$file='resultados';?>
 
 <? include_once('includes/header.php'); ?>
 
+<?php
+$selectSearch = $_POST['selectSearch'];
+$search = $_POST['search'];
 
+
+$zone = getSomething($tables['zones'], 'ZoneID', $selectSearch);
+$post = getPost(null, $selectSearch, trim($search));
+?>
 
 <? include_once('includes/search.php'); ?>
 <div class="container">
     <div class="row">
-        <h5 class="textgris">HOME / ZONA NORTE GBA / RESULTADOS</h5>
+        <h5 class="textgris">HOME / <?= strtoUpper($zone[0]['Zone']) ?> / <?= $search ?></h5>
         <h3 class="textgris">Encontramos las siguientes opciones:</h3>
-        <h6 class="p-2" style="border-top: 3px  solid gray;border-bottom: 3px  solid gray;"><i class="bi bi-check-circle"></i> ESTANCIA (4 coincidencias)</h6>
+        <h6 class="p-2" style="border-top: 3px  solid gray;border-bottom: 3px  solid gray;"><i class="bi bi-check-circle"></i> <?= $search ?> (<?= isset($post)?count($post):'0' ?> coincidencias)</h6>
         <br>
         <br>
         <br>
