@@ -1,0 +1,824 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease
+}
+
+
+/***************** ANCHOS*******************/
+
+.linea {
+    border-left: solid 5px;
+    background-color: red;
+}
+
+.col-12 {
+    width: 100%
+}
+
+.col-10 {
+    width: 85%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.col-9 {
+    width: 75%
+}
+
+.col-8 {
+    width: 66.66%
+}
+
+.col-7 {
+    width: 42.66%;
+    height: 100px;
+    float: left;
+    left: 8.33%
+}
+
+.col-6 {
+    width: 50%
+}
+
+.col-5 {
+    width: 40%;
+}
+
+.col-4 {
+    width: 33.33%
+}
+
+.col-3 {
+    width: 25%
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-05 {
+    width: 5%;
+}
+
+
+/*****************ALTURAS*******************/
+
+.h70 {
+    top: 100px;
+    left: 280px;
+}
+
+.top {
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.top-30 {
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+.top-200 {
+    margin-top: 200px!important;
+    margin-left: 0px;
+}
+
+.top-100 {
+    margin-top: 100px!important;
+    margin-left: 0px;
+}
+
+.bot {
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+
+.por {
+    left: 70px;
+}
+
+.por2 {
+    margin-top: 30px;
+}
+
+.h690 {
+    height: 550px
+}
+
+.h500 {
+    height: 450px;
+}
+
+.h345 {
+    height: 340px
+}
+
+.h300 {
+    height: 300px
+}
+
+.h200 {
+    height: 230px
+}
+
+.h-200p {
+    height: 200px
+}
+
+.h100 {
+    height: 220px;
+}
+
+.h100j {
+    height: 130px;
+}
+
+.h-100p {
+    height: 100px!important;
+}
+
+.h-80 {
+    height: 80px!important;
+}
+
+.h-50p {
+    height: 50px!important;
+}
+
+.hAuto {
+    height: auto;
+}
+
+.publi {
+    width: 80%;
+    height: 80%;
+}
+
+
+/******************* COLORES *******************/
+
+body {
+    color: dimgray;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+}
+
+.oro100 {
+    background-color: rgba(170, 143, 83, 1);
+    color: white!important;
+}
+
+.oro60 {
+    background-color: rgba(170, 143, 83, 0.6);
+    color: white!important;
+    height: 100%;
+}
+
+.gris1 {
+    background-color: black;
+    color: white!important;
+    opacity: 0.8;
+}
+
+.gris2 {
+    background-color: rgba(77, 77, 77, 1);
+    color: white!important;
+}
+
+.toro {
+    color: rgba(170, 143, 83, 1)!important;
+}
+
+.textgris {
+    color: rgba(84, 83, 82, 1)!important;
+}
+
+.blanco {
+    border: solid 2px rgba(170, 143, 83, 1);
+    background-color: white
+}
+
+.rojo {
+    border: solid 20px rgba(170, 143, 83, 1);
+    background-color: red
+}
+
+.oh {
+    overflow: hidden;
+}
+
+.fteli {
+    width: 90%;
+    height: 45%;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.boda {
+    background-image: url(../img/boda.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 87%;
+    margin: auto;
+    margin-top: 1em;
+}
+
+
+/******************* ENCABEZADOS Y SUBTITULOS *******************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sub16,
+.boton {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    font-size: 60pt;
+    font-weight: 300;
+    letter-spacing: 0px;
+}
+
+h2 {
+    font-size: 27pt;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+h3 {
+    font-size: 24pt;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: 20pt;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+h5 {
+    font-size: 16pt;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+h6 {
+    font-size: 12pt!important;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+.boton {
+    font-size: 12pt;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.sub16 {
+    font-size: 16pt;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+
+/******************* TEXTO / BOTONES / ANOTACIONES *******************/
+
+.cuerpo1,
+.sub14,
+.cuerpo2,
+.anotacion {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.cuerpo1 {
+    font-size: 12pt;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.cuerpo2 {
+    font-size: 10pt;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.anotacion {
+    font-size: 9pt;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.sub14 {
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.pd11 {
+    padding: 12px;
+    margin: 4px;
+}
+
+.pd10 {
+    padding: 5px;
+    margin: 4px;
+}
+
+.fl {
+    float: left;
+    border: solid 1px white;
+}
+
+.fla {
+    float: left;
+}
+
+
+/*fl:hover{ transform:scale(1.5,1.5); } para cuando pase el mouse se agrande*/
+
+.ma {
+    margin: auto;
+}
+
+.md-12 {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+    padding: 10px
+}
+
+.md-8 {
+    width: 66.6%;
+    float: left;
+    padding: 20px;
+}
+
+.md-6 {
+    width: 50%;
+    float: left;
+}
+
+.md-4 {
+    width: 33.3%;
+    float: left;
+    padding: 10px
+}
+
+.bbrr {
+    border-left: 2px;
+    border-bottom-right-radius: 12px;
+    background-color: rgba(128, 128, 128, 1);
+    color: white;
+    text-align: center
+}
+
+.bbrr:hover {
+    background-color: rgba(77, 77, 77, 1);
+}
+
+.bbrr:active {
+    background-color: rgba(170, 143, 83, 0.6);
+    color: white!important;
+}
+
+.btlr {
+    border-top-left-radius: 15px;
+    background-color: transparent;
+    color: white;
+    float: left;
+}
+
+.p {
+    padding-top: 20px;
+}
+
+.pr {
+    position: relative;
+}
+
+.pa {
+    position: absolute;
+}
+
+.rubro {
+    height: 20px;
+    width: 130px;
+    text-align: center;
+    transform: rotate(-45deg);
+    left: -25px;
+    top: 26px;
+}
+
+
+/*aca le dimos la posicion al bloque poronga*/
+
+.oh {
+    overflow: hidden;
+}
+
+
+/*controla lo q sucede con el contenido desbordado de nuestro contenedor(en este caso la imagen q esta adentro del contenedor)*/
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.cvl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btlr {
+    padding: 10%;
+    border-bottom-right-radius: 15px;
+    background-color: transparent;
+    color: white;
+    float: left;
+}
+
+
+/*---------------LOGOS Y IMAGENES---------------*/
+
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+}
+
+.izq {
+    margin-left: 350px;
+}
+
+.izq {
+    margin-left: 350px;
+}
+
+.mrl {
+    padding-right: 50px;
+}
+
+.img4 {
+    background-image: url(../img/origen3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img3 {
+    background-image: url(../img/origen2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img2 {
+    background-image: url(../img/origen.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img1 {
+    background-image: url(../img/image1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.koala {
+    background-image: url(../img/Koala.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo12 {
+    background-image: url(../img/1-LOGO.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.pg {
+    background-size: cover;
+    background-position: center;
+    height: 43px;
+}
+
+.salon {
+    background-image: url(../img/origen.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+/*-------------CARGA DE DATOS GRAL-------*/
+
+
+/* input{
+	border: 1px solid; padding: 10px; background-color: white!important;  
+}
+
+input[type="text"] {
+	width:300px;
+	background-color: red;
+}
+input[type="submit"] {
+	width:120px;
+	background-color: rgba(128,128,128,1);
+} */
+
+.notas {
+    background-image: url(../img/estancia_la_linda-quintas_y_estancias-buenos_aires-1480012318_grande.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+/*------------------------CENTRAR ELEMENTO VERTIAL Y HORIZONTALMENTE------------------------*/
+
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner {
+    width: 100%;
+    height: 50px;
+}
+
+.izq {
+    left: 0px;
+}
+
+.cont1 {
+    margin-left: 20px;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+}
+
+.a0 {
+    flex: 0.2;
+}
+
+.a01 {
+    flex: 0.7;
+}
+
+.a1 {
+    flex: 1;
+}
+
+.b3 {
+    flex: 3;
+}
+
+.b2 {
+    flex: 2;
+}
+
+select {
+    width: 250px;
+    padding: 0px 10px 0px 10px;
+    height: 35px;
+}
+
+.select-filter {
+    width: 250px;
+    padding: 0px 10px 0px 10px;
+    height: 27px;
+    background-color: gray;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin: 4px!important;
+}
+
+input {
+    width: 230px;
+    height: 38px;
+}
+
+.bot-gris {
+    border-bottom: 2px solid gray;
+}
+
+.bot-gold {
+    border-bottom: 2px solid rgba(170, 143, 83, 0.6);
+}
+
+.btn-tam {
+    height: 35px!important;
+    width: 200px!important;
+    border-radius: 0px 0px 20% 0px!important;
+}
+
+.card-color {
+    height: 490px;
+    background-color: gold;
+    opacity: 0.3;
+}
+
+.img-fondo {
+    width: 100%!important;
+    height: 150px!important;
+    background-image: url(../img/origen.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.margin-auto {
+    margin: 0px auto!important
+}
+
+.borde {
+    border: 2px solid rgba(170, 143, 83, 0.6);
+}
+
+.borde-bloque {
+    background-color: rgba(170, 143, 83, 1);
+}
+
+.bloque {
+    height: 220px;
+}
+
+form input:hover {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(170, 143, 83, 0.6)!important;
+}
+
+form input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(170, 143, 83, 0.6)!important;
+}
+
+.iconos {
+    color: white;
+    font-size: 25px;
+}
+
+.width40 {
+    width: 40%;
+}
+
+.iframe {
+    width: 620px;
+    height: 250px
+}
+
+.dropdown-menu-dark,
+.dropdown-item.active,
+.desplegable:hover,
+.desplegable:active {
+    background-color: rgba(170, 143, 83, 1)!important;
+    color: white!important;
+}
+
+.desplegable {
+    color: black!important;
+    width: 300px!important;
+}
+
+.boton-desplegable:focus {
+    box-shadow: 0 0 0 0.25rem rgba(170, 143, 83, 1)!important;
+}
+
+@media screen and (max-width:1200px) {
+    .select-filter {
+        width: 200px;
+    }
+    .bloque {
+        height: 280px;
+    }
+    .iframe {
+        width: 500px;
+        height: 250px
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .select-filter {
+        width: 170px;
+    }
+    .iframe {
+        width: 500px;
+        height: 250px
+    }
+}
+
+@media screen and (max-width:850px) {
+    .h100j {
+        height: 200px;
+    }
+    .h200 {
+        height: 300px;
+    }
+    .h100 {
+        height: 220px;
+    }
+    .top-30 {
+        margin-top: 90px!important;
+    }
+    .bloque {
+        height: 300px;
+    }
+    .select-filter {
+        width: 170px;
+    }
+    .iframe {
+        width: 550px;
+        height: 250px
+    }
+}
+
+@media screen and (max-width:800px) {
+    .bloque {
+        height: 450px;
+    }
+    .iframe {
+        width: 400px;
+        height: 250px
+    }
+}
+
+@media screen and (max-width:720px) {
+    .md-12,
+    .md-8,
+    .md-4,
+    .md-6,
+    body {
+        width: 100%
+    }
+    .h100j {
+        height: 200px;
+    }
+    .h300 {
+        height: 400px!important;
+    }
+    .h200 {
+        height: 500px!important;
+    }
+    .h100 {
+        height: 100px!important;
+    }
+    .img-carousel {
+        width: 100%;
+        margin: 0px auto!important;
+    }
+    .h500 {
+        height: 350px;
+    }
+    .top-30 {
+        margin-top: 100px!important;
+    }
+    .bloque {
+        height: 450px;
+    }
+    .iframe {
+        width: 400px;
+        height: 250px
+    }
+}
+
+@media screen and (max-width:570px) {
+    .h100 {
+        height: 400px;
+    }
+    .img-carousel {
+        width: 100%;
+        margin: 0px auto!important;
+    }
+    .h500 {
+        height: 360px;
+    }
+    .bloque {
+        height: 450px;
+    }
+    .iframe {
+        width: 350px;
+        height: 250px
+    }
+}

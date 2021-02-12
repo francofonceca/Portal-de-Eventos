@@ -58,6 +58,25 @@ if (isset($verify) && $logued) {
                 <a href='contacto.php' class=" a1 centrar toro">
                     CONTACTO
                 </a>
+                <div class="dropdown">
+                    <?php if ($logued) { ?>
+                        <a class="btn dropdown-toggle boton-desplegable" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Ver Perfil
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark desplegable" style="background-color: white!important;color: black!important;" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item desplegable" href="#"></a>Cerrar Sesión</li>
+                            <li><a class="dropdown-item desplegable" href="#">Editar Perfil</a></li>
+                            <li><a class="dropdown-item desplegable" href="#">Agregar Publicación</a></li>
+                        </ul>
+                    <?php }else{ ?>
+                        <a class="btn dropdown-toggle boton-desplegable" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Iniciar Sesión
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark desplegable" style="background-color: white!important;color: black!important;" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item desplegable" href="#">Registrarme</a></li>
+                        </ul>
+                    <?= } ?>
+                </div>
             <?php
             if ($logued) {
                 echo '<a href="logout.php" class=" a1 centrar toro">Cerrar sesión</a>';
