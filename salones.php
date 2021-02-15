@@ -9,7 +9,32 @@
 
 <div class="container">
     <div class="row pb-5">
-        <div class="col-sm-12 col-lg-3 p-2 col-md-6">
+        <?php 
+            $sql = 'SELECT * FROM ' . $tables['lounges'];
+            if(Existe($sql)) {
+                $events = Consulta($sql);
+                $count = 1;
+                foreach($events as $event){
+                    if($count == 4){
+                        echo ' </div> <div class="row">';
+                    }else{
+                        echo '
+                            <div class="col-sm-12 col-lg-3 p-2 col-md-6">
+                                <div class="card img-card">
+                                    <div class="card-body">
+                                        <h2 class="card-title margin-auto gris1">'.$event['Lounge'].'</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        ';
+                    }
+                    $count ++;      
+                }
+            }
+        ?>
+    </div>    
+</div>
+        <!-- <div class="col-sm-12 col-lg-3 p-2 col-md-6">
             <div class="card img-card">
                 <div class="card-body">
                     <h2 class="card-title margin-auto gris1">SALONES DE FIESTA</h2>
@@ -67,8 +92,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </div> -->
 
 
 <!-- FIN card events types -->
