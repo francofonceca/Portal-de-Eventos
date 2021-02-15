@@ -2,7 +2,7 @@
 
 
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 <!-- SEARCH BAR -->
 <div class="row h690 flores">
@@ -107,4 +107,4 @@
 <!-- FIN CARD  -->
 <br>
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

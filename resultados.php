@@ -3,9 +3,9 @@ if (!(isset($_POST) && isset($_POST['search']) && isset($_POST['selectSearch']) 
     header("Location:index.php");
 }
 ?>
-<? $title='Resultados';$file='resultados';?>
+<?php $title='Resultados';$file='resultados';?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 <?php
 $selectSearch = $_POST['selectSearch'];
@@ -16,7 +16,7 @@ $zone = getSomething($tables['zones'], 'ZoneID', $selectSearch);
 $post = getPost(null, $selectSearch, trim($search));
 ?>
 
-<? include_once('includes/search.php'); ?>
+<?php include_once('includes/search.php'); ?>
 <div class="container">
     <div class="row">
         <h5 class="textgris">HOME / <?= strtoUpper($zone[0]['Zone']) ?> / <?= $search ?></h5>
@@ -112,4 +112,4 @@ $post = getPost(null, $selectSearch, trim($search));
 </div>
 
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

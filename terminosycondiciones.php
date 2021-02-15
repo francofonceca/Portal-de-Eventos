@@ -1,9 +1,9 @@
-<? $title='Terminos & Condiciones';$file='promociones'?>
+<?php $title='Terminos & Condiciones';$file='promociones'?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 
-<? include_once('includes/search.php'); ?>
+<?php include_once('includes/search.php'); ?>
 
 <div class="row h500 salon centrar">
     <div class="col-lg-12 col-md-12 col-sm-12 oro60 h100j ">
@@ -36,4 +36,4 @@
     </div>
 </div>
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

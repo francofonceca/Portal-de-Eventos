@@ -1,6 +1,6 @@
-<? $title='Inicio de Sesión';$file='login';$register = true;?>
+<?php $title='Inicio de Sesión';$file='login';$register = true;?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 <?php
 
@@ -58,7 +58,7 @@ if (isset($_POST) && count($_POST) == 2) {
         <h2> No te pierdas nuestras promociones, inicia sesión y enterate de todo lo que tenemos para ofrecerte.</h2>
     </div>
 
-    <? include_once('includes/error.php'); ?>
+    <?php include_once('includes/error.php'); ?>
 
     <div class="col-lg-5 col-md-6 col-sm-10 margin-auto">
         <form action="login.php" method="POST">
@@ -86,4 +86,4 @@ if (isset($_POST) && count($_POST) == 2) {
         </form>
     </div>
 </div>
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

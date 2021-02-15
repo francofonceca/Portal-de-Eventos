@@ -1,10 +1,10 @@
-<? $title='Publicacion';$file='publicacion';?>
+<?php $title='Publicacion';$file='publicacion';?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 
 
-<? include_once('includes/search.php'); ?>
+<?php include_once('includes/search.php'); ?>
 <div class="container">
     <div class="row">
         <h5 class="textgris">HOME / ZONA NORTE GBA / RESULTADOS</h5>
@@ -195,4 +195,4 @@
     </div>
 </div>
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

@@ -1,4 +1,4 @@
-<?include_once('connect.php'); ?>
+<?php include_once('connect.php'); ?>
 <?php
 if (!isset($_SESSION)) {
     session_start();

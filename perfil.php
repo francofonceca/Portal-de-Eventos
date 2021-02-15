@@ -1,6 +1,6 @@
-<? $title='Perfil';$file='perfil';$profile = true;?>
+<?php $title='Perfil';$file='perfil';$profile = true;?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 <div class="col-lg-12 text-center py-5 textgris">
     <hr>
@@ -89,4 +89,4 @@
 
 
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

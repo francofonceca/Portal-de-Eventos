@@ -1,6 +1,6 @@
-<? $title='Registro';$file='register';$register = true;?>
+<?php $title='Registro';$file='register';$register = true;?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 <?php
 if (isset($_POST) && count($_POST) == 6) {
@@ -84,7 +84,7 @@ if (isset($_POST) && count($_POST) == 6) {
     </div>
     <div class="col-lg-5 col-md-6 col-sm-10 margin-auto">
 
-        <? include_once('includes/error.php'); ?>
+        <?php include_once('includes/error.php'); ?>
 
         <form action="register.php" method="POST">
             <div class="mb-3">
@@ -136,4 +136,4 @@ if (isset($_POST) && count($_POST) == 6) {
     </div>
 </div>
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

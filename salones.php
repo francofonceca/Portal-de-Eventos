@@ -1,9 +1,9 @@
-<? $title='Salones';$file='salones';$salones = true;?>
+<?php $title='Salones';$file='salones';$salones = true;?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 
-<? include_once('includes/search.php'); ?>
+<?php include_once('includes/search.php'); ?>
 
 <!-- card events types -->
 
@@ -97,4 +97,4 @@
 
 <!-- FIN card events types -->
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>
