@@ -72,7 +72,7 @@ function Existe($sql)
 {
     $valor = false;
     if ($lookup = $GLOBALS['db']->query($sql))
-        $valor =  $lookup->rowCount() == 1;
+        $valor =  $lookup->rowCount() > 0;
     return $valor;
 }
 
