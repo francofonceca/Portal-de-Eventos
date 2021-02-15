@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Portal de Eventos - Crear Publicación</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="conteiner">
@@ -34,38 +35,120 @@
             <hr>
         </div>
         <div class="row borde mx-1">
-            <div class="col-lg-5 col-md-5 col-sm-12">
+            <div class="col-lg-5 col-md-5 col-sm-12 borde-right">
                 <h4 class="textgris text-center"> Adicionales </h4>
+                <div class="row justify-content-evenly">
+                    <div class="row justify-content-evenly py-4">
+                        <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                            <input type="text" name="titulo" placeholder="Link/Url de Sitio Web" />
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                            <input type="text" name="titulo" placeholder="Link/Url de Facebook" />
+                        </div>
+                    </div>
+                    <div class="row justify-content-evenly py-4">
+                        <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                            <input type="text" name="titulo" placeholder="Link/Url de Instagram" />
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                            <input type="text" name="titulo" placeholder="Link/Url de Twitter" />
+                        </div>
+                    </div>
+                    <div class="row justify-content-evenly py-4">
+                        <div class="col-lg-10 col-md-10 col-sm-10 text-center">
+                            <input type="text" style="width: 100%;" name="titulo" placeholder="Número de contacto adicional" />
+                        </div>
+                    </div>
+                    <div class="row justify-content-evenly py-4">
+                        <div class="col-lg-10 col-md-10 col-sm-10 text-center">
+                            <input type="email" style="width: 100%;" name="titulo" placeholder="Email de contacto adicional" />
+                        </div>
+                    </div>
+                    <div class="row justify-content-evenly py-4">
+                        <div class="col-lg-10 col-md-10 col-sm-10 text-center">
+                            <input type="number" style="width: 100%;" name="titulo" placeholder="Teléfono de contacto adicional" />
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-7 col-md-7 col-sm-12">
                 <h4 class="textgris text-center py-3"> Información Obligatoria </h4>
                 <div class="row justify-content-evenly">
-                    <div class="col-lg-6">
-                        <input type="text" name="titulo" placeholder="Titúlo de la publicación, Ej: Estancia la Linda" />
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <input type="text" required name="titulo" placeholder="Titúlo de la publicación, Ej: Estancia la Linda" />
                     </div>
-                    <div class="col-lg-6">
-                        <input type="text" name="titulo" placeholder="Frase de la publicación, Ej: Donde la Naturaleza y la Exelencia se unen" />
-                    </div>
-                </div>
-                <div class="row justify-content-evenly py-4">
-                    <div class="col-lg-6">
-                        <input type="text" name="titulo" placeholder="Dirección, Ej: Pedro Alvear 2133" />
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" name="titulo" placeholder="Descripción corta, Ej: Estancia en alquiler Por dia y semana" />
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <input type="text" required name="titulo" placeholder="Frase de la publicación, Ej: Donde la Naturaleza y la Exelencia se unen" />
                     </div>
                 </div>
                 <div class="row justify-content-evenly py-4">
-                    <div class="col-lg-12">
-                        <textarea name="descripcion" id="" cols="90" rows="10" placeholder="Ingresá una Descripcion sobre la publicación"></textarea>
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <input type="text" required name="titulo" placeholder="Dirección, Ej: Pedro Alvear 2133" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <input type="text" required name="titulo" placeholder="Descripción corta, Ej: Estancia en alquiler Por dia y semana" />
                     </div>
                 </div>
                 <div class="row justify-content-evenly py-4">
-                    <div class="col-lg-6">
-                        <input type="number" min="0" name="titulo" placeholder="Minima de invitados" />
+                    <div class="col-lg-12 col-md-12 col-sm-10 text-center">
+                        <textarea name="descripcion" required id="" cols="90" rows="10" placeholder="Ingresá una Descripcion sobre la publicación"></textarea>
                     </div>
-                    <div class="col-lg-6">
-                        <input type="number" min="20" max="5000" name="titulo" placeholder="Maxima de invitados" />
+                </div>
+                <div class="row justify-content-evenly py-4">
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <input type="number" required min="0" name="titulo" placeholder="Minima de invitados" />
+                    </div>  
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <input type="number" required min="20" max="5000" name="titulo" placeholder="Maxima de invitados" />
+                    </div>
+                </div>
+                <div class="row justify-content-evenly py-4">
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <input type="text" required  name="titulo" placeholder="Provincia del lugar" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <input type="text" required  name="titulo" placeholder="Localidad del lugar" />
+                    </div>
+                </div>
+                <div class="row justify-content-evenly py-4">
+                    <div class="col-lg-10 col-md-10 col-sm-10 text-center">
+                        <input type="text" required style="width: 80%!important;" name="titulo" placeholder="Ubicación del lugar" />
+                    </div>
+                </div>
+                <div class="row justify-content-evenly py-4">
+                    <div class="col-lg-10 col-md-10 col-sm-10 text-center">
+                        <input type="text" required style="width: 80%!important;" name="titulo" placeholder="Código de mapa de Google" />
+                    </div>
+                </div>
+                <div class="row justify-content-evenly py-4">
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <select name="" id="">
+                            <option value="">Tipo de Evento</option>
+                            <option value="">Salon de fiesta</option>
+                            <option value="">Quinta</option>
+                            <option value="">Salon infantil</option>
+                            <option value="">Pubs & resto</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-10 text-center">
+                        <select name="" id="">
+                            <option value="">Horario</option>
+                            <option value="">A arreglar con el cliente</option>
+                            <option value="">08:00hs a 14:00hs</option>
+                            <option value="">08:00hs a 20:00hs</option>
+                            <option value="">10:00hs a 14:00hs</option>
+                            <option value="">10:00hs a 22:00hs</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-evenly py-4">
+                    <div class="col-lg-12 col-md-12 col-sm-12 text-center textgris"><h3>Imágenes</h3></div>
+                    <div class="col-lg-3 col-md-3 col-sm-10">  
+                        <input name="file-input" id="file-input" type="file" multiple />
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-10">
+                        <h5 class="text-center">última imagen seleccionada</h5>
+                        <img id="imgSalida" width="100%" height="90%" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgHBwkGDQoaBwcHBw8ICRAOFhEiFhURExUYKCggGBolGxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQf/xAAWEAEBAQAAAAAAAAAAAAAAAAAAEQH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A3EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASqCAAAAAAoAAAAAAAAAAAAAAAJoAAAAAIAD/2Q==" />
                     </div>
                 </div>
             </div>
@@ -109,7 +192,34 @@
         </div>
         <!-- FIN FOOTER -->
     </div>
-
     
+    <script>
+        $(document).ready(function(){
+            $(function() {
+                $('#file-input').change(function(e) {
+                    addImage(e); 
+            });
+            function addImage(e){
+                    var file = e.target.files[0],
+                    imageType = /image.*/;
+                
+                    if (!file.type.match(imageType))
+                    return;
+                
+                    var reader = new FileReader();
+                
+                    reader.onload = function(e){
+                        var result=e.target.result;
+                    $('#imgSalida').attr("src",result);
+                    }
+                    
+                    reader.readAsDataURL(file);
+                    }
+                });
+            });
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
 </body>
 </html>

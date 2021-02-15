@@ -530,19 +530,6 @@ h6 {
 /*-------------CARGA DE DATOS GRAL-------*/
 
 
-/* input{
-	border: 1px solid; padding: 10px; background-color: white!important;  
-}
-
-input[type="text"] {
-	width:300px;
-	background-color: red;
-}
-input[type="submit"] {
-	width:120px;
-	background-color: rgba(128,128,128,1);
-} */
-
 .notas {
     background-image: url(../img/estancia_la_linda-quintas_y_estancias-buenos_aires-1480012318_grande.jpg);
     background-size: cover;
@@ -656,7 +643,9 @@ input {
 .borde {
     border: 2px solid rgba(170, 143, 83, 0.6);
 }
-
+.borde-right{
+    border-right: 2px solid rgba(170, 143, 83, 0.6);
+}
 .borde-bloque {
     background-color: rgba(170, 143, 83, 1);
 }
@@ -727,6 +716,11 @@ form input:focus {
         width: 500px;
         height: 250px
     }
+    
+    input {
+        width: 180px;
+        height: 34px;
+    }
 }
 
 @media screen and (max-width:850px) {
@@ -751,6 +745,11 @@ form input:focus {
     .iframe {
         width: 550px;
         height: 250px
+    }
+    
+    input {
+        width: 200px;
+        height: 34px;
     }
 }
 
