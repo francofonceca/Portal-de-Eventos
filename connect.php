@@ -26,6 +26,7 @@ $GLOBALS['tables']= array(
     'filters'      => 'portal.filters',
     'category_filter'      => 'portal.category_filter',
     'zones'      => 'portal.zones',
+    'events'      => 'portal.events',
 
     'posts'      => 'portal.posts',
     'post_lounge'      => 'portal.post_lounge',

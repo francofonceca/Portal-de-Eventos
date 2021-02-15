@@ -13,7 +13,8 @@
 
     <form class="col-lg-7" method="POST" action="resultados.php">
         <div class="text-center">
-            <?= isset($selectSearch) ? getSelectZone($selectSearch) : getselectZone() ?>
+            <?php $selectSearch = isset($selectSearch) ? $selectSearch:null;?>
+            <?= getSelect($tables['zones'],'Zone','ASC','ZoneID','Zone',$selectSearch)?>
             <input type="text" placeholder="¿Qué estás buscando?" name="search"
                 <?= isset($search) ? 'value="' . $search . '"' : '' ?>>
             <button type='submit' class="btn btn-secondary " style="border-radius: 50%;"><i

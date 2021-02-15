@@ -30,27 +30,34 @@ function getCategoriesFilters($id = null)
     return Consulta($sql);
 }
 
-function getSelectZone($id = null)
-{
-    $zones = getSomething($GLOBALS['tables']['zones'], null, null, 'Zone', 'ASC');
-    $html = '<select name="selectSearch">';
-    foreach ($zones as $key => $zone) {
+//** COMIENZO DE GET SELECT*/
+function getSelect($table,$orderColumn=null,$order=null,$selectValue,$selectShow,$selectSelected = null, $selectClass = '',$selectTitle=null,$selectArray = null){
+    
+    $html = '<select name="selectSearch" class="'.$selectClass.'">';
+    $html.= verify($selectTitle)?'<option>'.$selectTitle.'</option>':'';
+    if (is_array($selectArray)) {
+        $data = $selectArray;
+    }else{
+        $data = getSomething($table, null, null, $orderColumn, $order);
+    }
+    foreach ($data as $key => $item) {
         $selected = '';
-        if (isset($id) && !is_null($id) && $zone['ZoneID'] == $id) {
+        if (verify($selectSelected) && $item[$selectValue] == $selectSelected) {
             $selected = 'selected';
         }
-        $html .= '<option value="' . $zone['ZoneID'] . '" ' . $selected . '>';
-        $html .= $zone['Zone'];
+        $html .= '<option value="' . $item[$selectValue] . '" ' . $selected . '>';
+        $html .= $item[$selectShow];
         $html .= '</option>';
     }
     $html .= '</select>';
     return $html;
 }
+//** FIN DE GET SELECT*/
 
 function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, $FilterID = null, $LoungeID = null)
 {
     $where = '';
-    if (isset($id) && !is_null($id)) {
+    if (verify($id)) {
         $where = ' posts.PostID = ' . $id;
     } else {
         $whereVec[] = verify($ZoneID) ? ' posts.ZoneID = ' . $ZoneID . ' ' : null;
