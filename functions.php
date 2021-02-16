@@ -54,7 +54,7 @@ function getSelect($table,$orderColumn=null,$order=null,$selectValue,$selectShow
 }
 //** FIN DE GET SELECT*/
 
-function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, $FilterID = null, $LoungeID = null)
+function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, $FilterID = null, $LoungeID = null,$EventID = null)
 {
     $where = '';
     if (verify($id)) {
@@ -65,6 +65,7 @@ function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, 
         $whereVec[] = verify($CategoryID) ? ' post_lounge.CategoryID = ' . $id . ' ' : null;
         $whereVec[] = verify($FilterID) ? ' post_filter.FilterID = ' . $FilterID . ' ' : null;
         $whereVec[] = verify($LoungeID) ? ' post_lounge.LoungeID = ' . $LoungeID . ' ' : null;
+        $whereVec[] = verify($EventID) ? ' post_events.EventID = ' . $EventID . ' ' : null;
     }
     foreach ($whereVec as $key => $item) {
         if (isset($whereVec[$key + 1])) {
@@ -76,20 +77,84 @@ function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, 
 
     $where = strlen($where) > 0 ? 'WHERE ' . $where : '';
 
-    $sql = 'SELECT posts.*,categories.*,filters.*,post_images.*,zones.*
+    $sql = 'SELECT posts.*,zones.Zone
             FROM ' . $GLOBALS['tables']['posts'] . '
-            INNER JOIN ' . $GLOBALS['tables']['post_images'] . ' ON posts.PostID = post_images.PostID
             INNER JOIN ' . $GLOBALS['tables']['zones'] . ' ON zones.ZoneID = posts.ZoneID
 
             INNER JOIN ' . $GLOBALS['tables']['post_lounge'] . ' ON posts.PostID = post_lounge.PostID
-            INNER JOIN ' . $GLOBALS['tables']['lounges'] . ' ON lounges.LoungeID = post_lounge.LoungeID
 
             LEFT JOIN ' . $GLOBALS['tables']['post_category'] . ' ON posts.PostID = post_category.PostID
-            LEFT JOIN ' . $GLOBALS['tables']['categories'] . ' ON categories.CategoryID = post_category.CategoryID
 
             LEFT JOIN ' . $GLOBALS['tables']['post_filter'] . ' ON posts.PostID = post_filter.PostID
-            LEFT JOIN ' . $GLOBALS['tables']['filters'] . ' ON filters.FilterID = post_filter.FilterID
+
+            LEFT JOIN ' . $GLOBALS['tables']['post_events'] . ' ON posts.PostID = post_events.PostID
             
-            ' . $where;
-    Consulta($sql);
+            ' . $where.'
+            GROUP BY PostID LIMIT 1
+            ';
+    $posts = Consulta($sql);
+
+    $whereID = '';
+    foreach ($posts as $key => $post) {
+        $whereID .= 'posts.PostID = '.$post['PostID'];
+        if ($key<count($posts)-1) {
+            $whereID .=' OR ';
+        }  
+    }
+    $whereID = strlen($whereID)>0?" WHERE ".$whereID:'';
+    
+    if (strlen($whereID)>0) {
+        $sql = 'SELECT posts.PostID,post_events.*
+                FROM ' . $GLOBALS['tables']['posts'] . '
+                LEFT JOIN ' . $GLOBALS['tables']['post_events'] . ' ON posts.PostID = post_events.PostID
+                LEFT JOIN ' . $GLOBALS['tables']['events'] . ' ON events.EventID = post_events.EventID
+                
+                ' . $whereID;
+        $events = Consulta($sql);
+        
+        $sql = 'SELECT posts.PostID,lounges.*
+                FROM ' . $GLOBALS['tables']['posts'] . '
+    
+                LEFT JOIN ' . $GLOBALS['tables']['post_lounge'] . ' ON posts.PostID = post_lounge.PostID
+                LEFT JOIN ' . $GLOBALS['tables']['lounges'] . ' ON lounges.LoungeID = post_lounge.LoungeID
+                
+                ' . $whereID;
+        $lounges = Consulta($sql);
+        
+        $sql = 'SELECT posts.PostID,categories.*
+                FROM ' . $GLOBALS['tables']['posts'] . '
+                LEFT JOIN ' . $GLOBALS['tables']['post_category'] . ' ON posts.PostID = post_category.PostID
+                LEFT JOIN ' . $GLOBALS['tables']['categories'] . ' ON categories.CategoryID = post_category.CategoryID
+                
+                ' . $whereID;
+        $categories = Consulta($sql);
+        
+        $sql = 'SELECT posts.PostID,filters.*
+                FROM ' . $GLOBALS['tables']['posts'] . '
+                LEFT JOIN ' . $GLOBALS['tables']['post_filter'] . ' ON posts.PostID = post_filter.PostID
+                LEFT JOIN ' . $GLOBALS['tables']['filters'] . ' ON filters.FilterID = post_filter.FilterID
+                
+                ' . $whereID;
+        $filters = Consulta($sql);
+    
+        $sql = 'SELECT posts.PostID,post_images.*
+                FROM ' . $GLOBALS['tables']['posts'] . '
+                LEFT JOIN ' . $GLOBALS['tables']['post_images'] . ' ON posts.PostID = post_images.PostID
+                
+                ' . $whereID;
+        $images = Consulta($sql);
+        $return = [
+            'events' => $events,
+            'posts' => $posts,
+            'lounges' => $lounges,
+            'categories' => $categories,
+            'filters' => $filters,
+            'images' => $images,
+        ];
+    }else{
+        $return = [
+            'posts' => $posts
+        ];
+    }
+    return $return;
 }

@@ -30,8 +30,6 @@
 
 <!-- FIN SEARCH BAR -->
 <br>
-
-
 <!-- CAROUSEL -->
 <div id="carouselExampleControls" class="carousel slide oro60" data-bs-ride="carousel ">
     <div class="carousel-inner h500">

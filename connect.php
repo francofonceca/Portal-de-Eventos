@@ -33,6 +33,7 @@ $GLOBALS['tables']= array(
     'post_category'      => 'portal.post_category',
     'post_filter'      => 'portal.post_filter',
     'post_images'      => 'portal.post_images',
+    'post_events'      => 'portal.post_events',
 
     
     'contact'      => 'portal.contact',

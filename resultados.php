@@ -13,8 +13,9 @@ $search = $_POST['search'];
 
 
 $zone = getSomething($tables['zones'], 'ZoneID', $selectSearch);
-$post = getPost(null, $selectSearch, trim($search));
+$result = getPost(null, $selectSearch, trim($search));
 
+$posts = $result['posts'];
 
 $zoneFilter = isset($_POST['zoneFilter']) ? $_POST['zoneFilter']:null;
 $eventFilter = isset($_POST['eventFilter']) ? $_POST['eventFilter']:null;
@@ -30,7 +31,7 @@ $promoFilter = isset($_POST['promoFilter']) ? $_POST['promoFilter']:null;
         <h5 class="textgris">HOME / <?= strtoUpper($zone[0]['Zone']) ?> / <?= $search ?></h5>
         <h3 class="textgris">Encontramos las siguientes opciones:</h3>
         <h6 class="p-2" style="border-top: 3px  solid gray;border-bottom: 3px  solid gray;"><i
-                class="bi bi-check-circle"></i> <?= $search ?> (<?= isset($post)?count($post):'0' ?> coincidencias)</h6>
+                class="bi bi-check-circle"></i> <?= $search ?> (<?= isset($posts)?count($posts):'0' ?> coincidencias)</h6>
         <br>
         <br>
         <br>
@@ -72,6 +73,30 @@ $promoFilter = isset($_POST['promoFilter']) ? $_POST['promoFilter']:null;
             <?= getSelect($tables['events'],'EventType','ASC','EventID','EventType',$eventFilter,'select-filter','PROMOCIONES')?>
         </div>
         <div class="col-lg-9" style="padding-left:30px!important;">
+
+            <?php
+                foreach ($posts as $key => $post) {
+                    ?>
+                    <div class="col-lg-12 row align-items-start borde bloque pb-2">
+                            <div class="col-lg-8 ">
+                                <p><i class="bi bi-geo-alt"></i><strong><?=$post['Zone']?></strong></p>
+                                <h3><?=$post['Title']?></h3>
+                                <h6><?=substr($post['Description'], 0, 200)?>
+                                </h6>
+                                <button class="btn btn-secondary btn-sm">+</button>
+                                <button class="btn btn-secondary btn-sm "> Cotizar</button>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="img/<?=$post['Image']?>"
+                                    class=" pt-3" style="width: 100%;height: 200px;">
+                            </div>
+                        </div>
+                        <br>
+                    <?php
+                }
+            ?>
+
+
             <div class="col-lg-12 row align-items-start borde bloque pb-2">
                 <div class="col-lg-8 ">
                     <p><i class="bi bi-geo-alt"></i><strong>Moreno, zona oeste de GBA.</strong></p>
