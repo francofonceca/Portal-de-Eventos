@@ -1,9 +1,9 @@
-<? $title='Ideas y Notas';$file='ideas&notas';?>
+<?php $title='Ideas y Notas';$file='ideas&notas';?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 
-<? include_once('includes/search.php'); ?>
+<?php include_once('includes/search.php'); ?>
 <div class="row h500 notas centrar">
     <div class="col-lg-12 col-md-12 col-sm-12 oro60 h100j ">
         <h1 class="text-center top-30">Ideas & Notas</h1>
@@ -98,4 +98,4 @@
     <div class=" row px-5">
     </div>
 
-    <? include_once('includes/footer.php'); ?>
+    <?php include_once('includes/footer.php'); ?>

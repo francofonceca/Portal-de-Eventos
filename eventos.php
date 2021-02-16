@@ -1,9 +1,9 @@
-<? $title='Eventos';$file='eventos';?>
+<?php $title='Eventos';$file='eventos';?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 
-<? include_once('includes/search.php'); ?>
+<?php include_once('includes/search.php'); ?>
         <br>
         <div class="container">
             <div class="row ">
@@ -124,4 +124,4 @@
         </div>
         
         <div><hr></hr></div>
-    <? include_once('includes/footer.php'); ?>
+    <?php include_once('includes/footer.php'); ?>

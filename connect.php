@@ -26,12 +26,19 @@ $GLOBALS['tables']= array(
     'filters'      => 'portal.filters',
     'category_filter'      => 'portal.category_filter',
     'zones'      => 'portal.zones',
+    'events'      => 'portal.events',
 
     'posts'      => 'portal.posts',
     'post_lounge'      => 'portal.post_lounge',
     'post_category'      => 'portal.post_category',
     'post_filter'      => 'portal.post_filter',
     'post_images'      => 'portal.post_images',
+    'post_events'      => 'portal.post_events',
+
+    
+    'contact'      => 'portal.contact',
+    'work'      => 'portal.work',
+    'company'      => 'portal.company',
 );
 
 // Connection
@@ -71,7 +78,7 @@ function Existe($sql)
 {
     $valor = false;
     if ($lookup = $GLOBALS['db']->query($sql))
-        $valor =  $lookup->rowCount() == 1;
+        $valor =  $lookup->rowCount() > 0;
     return $valor;
 }
 

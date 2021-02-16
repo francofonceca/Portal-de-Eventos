@@ -1,6 +1,6 @@
-<? $title='Registro';$file='register';$verify = true;?>
+<?php $title='Registro';$file='register';$register = true;?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 <?php
 if (isset($_POST) && count($_POST) == 6) {
@@ -32,6 +32,7 @@ if (isset($_POST) && count($_POST) == 6) {
                         $_SESSION['name'] = $name;
                         $_SESSION['surname'] = $surname;
                         $_SESSION['email'] = $email;
+                        $_SESSION['phone'] = $phone;
                         redirect('index');
                     }else{
                         $error = "Error al registrarse, revise sus datos o contacte al técnico";
@@ -62,7 +63,6 @@ if (isset($_POST) && count($_POST) == 6) {
     $surname = clean($_POST['surname']);
     $phone = clean($_POST['phone']);
     $email = clean($_POST['email']);
-    $password = clean($_POST['password']);
 }
 
 ?>
@@ -84,7 +84,7 @@ if (isset($_POST) && count($_POST) == 6) {
     </div>
     <div class="col-lg-5 col-md-6 col-sm-10 margin-auto">
 
-        <? include_once('includes/error.php'); ?>
+        <?php include_once('includes/error.php'); ?>
 
         <form action="register.php" method="POST">
             <div class="mb-3">
@@ -125,15 +125,15 @@ if (isset($_POST) && count($_POST) == 6) {
             </div>
             <br>
             <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                <button type="submit" class="btn btn-secondary btn-tam">
-                    Registrarse
-                </button>
                 <a type="button" class="btn btn-secondary btn-tam" href='login.php'>
                     Ya tengo una cuenta!
                 </a>
+                <button type="submit" class="btn btn-secondary btn-tam">
+                    Registrarse
+                </button>
             </div>
         </form>
     </div>
 </div>
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

@@ -1,6 +1,6 @@
-<? $title='Inicio de Sesión';$file='login';$verify = true;?>
+<?php $title='Inicio de Sesión';$file='login';$register = true;?>
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 <?php
 
@@ -21,6 +21,7 @@ if (isset($_POST) && count($_POST) == 2) {
                     $_SESSION['name'] = $user['Name'];
                     $_SESSION['surname'] = $user['Surname'];
                     $_SESSION['email'] = $user['Email'];
+                    $_SESSION['phone'] = $user['Phone'];
                     redirect('index');
                 }else{
                     $error = "Contraseña incorrecta";
@@ -57,7 +58,7 @@ if (isset($_POST) && count($_POST) == 2) {
         <h2> No te pierdas nuestras promociones, inicia sesión y enterate de todo lo que tenemos para ofrecerte.</h2>
     </div>
 
-    <? include_once('includes/error.php'); ?>
+    <?php include_once('includes/error.php'); ?>
 
     <div class="col-lg-5 col-md-6 col-sm-10 margin-auto">
         <form action="login.php" method="POST">
@@ -85,4 +86,4 @@ if (isset($_POST) && count($_POST) == 2) {
         </form>
     </div>
 </div>
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>

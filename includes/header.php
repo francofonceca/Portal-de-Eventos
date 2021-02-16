@@ -1,11 +1,11 @@
-<?include_once('connect.php'); ?>
+<?php include_once('connect.php'); ?>
 <?php
 if (!isset($_SESSION)) {
     session_start();
 }
-$logued = isset($_SESSION['name']) && isset($_SESSION['surname']) && isset($_SESSION['email']);
-if (isset($verify) && $logued) {
-    header('Location:index.php');
+$logued = isset($_SESSION['name']) && isset($_SESSION['surname']) && isset($_SESSION['email'])  && isset($_SESSION['phone']);
+if (($logued && isset($register)) || (!$logued && isset($profile))) {
+    redirect('index');
 }
 ?>
 <!DOCTYPE html>

@@ -2,7 +2,7 @@
 
 
 
-<? include_once('includes/header.php'); ?>
+<?php include_once('includes/header.php'); ?>
 
 <!-- SEARCH BAR -->
 <div class="row h690 flores">
@@ -10,31 +10,26 @@
         <br />
         <h2 class="text-center"> ENCONTRÁ TODO PARA TU EVENTO</h2>
         <div class="container">
-            <div class="row align-items-start col-lg-10 ms-md-auto">
+            <form class="row align-items-start col-lg-10 ms-md-auto" method="POST" action="resultados.php">
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <select>
-                        <option>Zona: ejemplo San Miguel</option>
-                        <option value="tortuguitas">Tortuguitas</option>
-                        <option value="Del Viso">Del Viso</option>
-                    </select>
+            <?= getSelect($tables['zones'],'Zone','ASC','ZoneID','Zone')?>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <input type="text" placeholder="¿Qué estás buscando?">
+                    <input type="text" placeholder="¿Qué estás buscando?" name="search"
+                        <?= isset($search) ? 'value="' . $search . '"' : '' ?>>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <button type="button" class="btn btn-secondary btn-tam">
+                    <button  type='submit' class="btn btn-secondary btn-tam">
                         Buscar
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 
 <!-- FIN SEARCH BAR -->
 <br>
-
-
 <!-- CAROUSEL -->
 <div id="carouselExampleControls" class="carousel slide oro60" data-bs-ride="carousel ">
     <div class="carousel-inner h500">
@@ -48,7 +43,8 @@
             <img src="img/origen.jpg" class="d-block  img-carousel" alt="...">
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-            <span class="oro100 carousel-control-prev-icon h-50p" style="margin-left:0px!important" aria-hidden="true"></span>
+            <span class="oro100 carousel-control-prev-icon h-50p" style="margin-left:0px!important"
+                aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
@@ -100,11 +96,13 @@
     <div class=" col-12 h100 fl blanco p-2">
         <h3 class="toro"> TE CONTAMOS QUIENES SOMOS</h3>
         <h1 class="toro"> EL PORTAL </h1>
-        <h4 class="toro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+        <h4 class="toro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+            tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+            tation ullamcorper suscipit lobortis nisl
             ut aliquip ex ea commodo consequat.</h4>
     </div>
 </div>
 <!-- FIN CARD  -->
 <br>
 
-<? include_once('includes/footer.php'); ?>
+<?php include_once('includes/footer.php'); ?>
