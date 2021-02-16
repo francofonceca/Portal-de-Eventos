@@ -12,7 +12,7 @@
         <div class="container">
             <form class="row align-items-start col-lg-10 ms-md-auto" method="POST" action="resultados.php">
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-            <?= getSelect($tables['zone'],'Zone','ASC','ZoneID','Zone') ?>
+            <?= getSelect($tables['zones'],'Zone','ASC','ZoneID','Zone')?>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
                     <input type="text" placeholder="¿Qué estás buscando?" name="search"

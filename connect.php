@@ -33,6 +33,11 @@ $GLOBALS['tables']= array(
     'post_category'      => 'portal.post_category',
     'post_filter'      => 'portal.post_filter',
     'post_images'      => 'portal.post_images',
+
+    
+    'contact'      => 'portal.contact',
+    'work'      => 'portal.work',
+    'company'      => 'portal.company',
 );
 
 // Connection
