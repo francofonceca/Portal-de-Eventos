@@ -8,7 +8,13 @@ function redirect($page)
     header("Location:$page.php");
 }
 function verify($value){
-    return isset($value) && !is_null($value) && strlen($value)>0;
+    $verificar = isset($value) && !is_null($value);
+    if (is_array($value)) {
+        $verificar = count($value)>0 && $verificar;
+    }else{
+        $verificar = (strlen($value)>0) && $verificar;
+    }
+    return $verificar;
 }
 
 function getSomething($table, $IDColumn = null, $id = null, $OrderColumn = null, $Order = null)
@@ -31,9 +37,9 @@ function getCategoriesFilters($id = null)
 }
 
 //** COMIENZO DE GET SELECT*/
-function getSelect($table,$orderColumn=null,$order=null,$selectValue,$selectShow,$selectSelected = null, $selectClass = '',$selectTitle=null,$selectArray = null){
+function getSelect($table,$orderColumn=null,$order=null,$selectValue,$selectShow,$selectSelected = null, $selectClass = '',$selectTitle=null,$selectArray = null,$selectName = 'selectSearch'){
     
-    $html = '<select name="selectSearch" class="'.$selectClass.'">';
+    $html = '<select name="'.$selectName.'" class="'.$selectClass.'">';
     $html.= verify($selectTitle)?'<option>'.$selectTitle.'</option>':'';
     if (is_array($selectArray)) {
         $data = $selectArray;
@@ -54,7 +60,7 @@ function getSelect($table,$orderColumn=null,$order=null,$selectValue,$selectShow
 }
 //** FIN DE GET SELECT*/
 
-function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, $FilterID = null, $LoungeID = null,$EventID = null)
+function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$EventID = null)
 {
     $where = '';
     if (verify($id)) {
@@ -62,8 +68,6 @@ function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, 
     } else {
         $whereVec[] = verify($ZoneID) ? ' posts.ZoneID = ' . $ZoneID . ' ' : null;
         $whereVec[] = verify($Title) ? ' posts.Title LIKE "%' . $Title . '%" ' : null;
-        $whereVec[] = verify($CategoryID) ? ' post_lounge.CategoryID = ' . $id . ' ' : null;
-        $whereVec[] = verify($FilterID) ? ' post_filter.FilterID = ' . $FilterID . ' ' : null;
         $whereVec[] = verify($LoungeID) ? ' post_lounge.LoungeID = ' . $LoungeID . ' ' : null;
         $whereVec[] = verify($EventID) ? ' post_events.EventID = ' . $EventID . ' ' : null;
     }
@@ -76,12 +80,11 @@ function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, 
     }
 
     $where = strlen($where) > 0 ? 'WHERE ' . $where : '';
-
     $sql = 'SELECT posts.*,zones.Zone
             FROM ' . $GLOBALS['tables']['posts'] . '
             INNER JOIN ' . $GLOBALS['tables']['zones'] . ' ON zones.ZoneID = posts.ZoneID
 
-            INNER JOIN ' . $GLOBALS['tables']['post_lounge'] . ' ON posts.PostID = post_lounge.PostID
+            LEFT JOIN ' . $GLOBALS['tables']['post_lounge'] . ' ON posts.PostID = post_lounge.PostID
 
             LEFT JOIN ' . $GLOBALS['tables']['post_category'] . ' ON posts.PostID = post_category.PostID
 
@@ -90,16 +93,18 @@ function getPost($id = null, $ZoneID = null, $Title = null, $CategoryID = null, 
             LEFT JOIN ' . $GLOBALS['tables']['post_events'] . ' ON posts.PostID = post_events.PostID
             
             ' . $where.'
-            GROUP BY PostID LIMIT 1
+            GROUP BY PostID
             ';
     $posts = Consulta($sql);
 
     $whereID = '';
-    foreach ($posts as $key => $post) {
-        $whereID .= 'posts.PostID = '.$post['PostID'];
-        if ($key<count($posts)-1) {
-            $whereID .=' OR ';
-        }  
+    if (verify($posts)) {
+        foreach ($posts as $key => $post) {
+            $whereID .= 'posts.PostID = '.$post['PostID'];
+            if ($key<count($posts)-1) {
+                $whereID .=' OR ';
+            }  
+        }
     }
     $whereID = strlen($whereID)>0?" WHERE ".$whereID:'';
     

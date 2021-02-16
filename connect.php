@@ -71,6 +71,7 @@ function Consulta($sql)
     if ($lookup = $GLOBALS['db']->query($sql)) {
         return $lookup->fetchall();
     } else {
+        echo $sql;
         print ERROR;
     }
 }
