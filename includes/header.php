@@ -64,26 +64,21 @@ if (($logued && isset($register)) || (!$logued && isset($profile))) {
                             Ver Perfil
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark desplegable" style="background-color: white!important;color: black!important;" aria-labelledby="dropdownMenuButton2">
-                            <li><a class="dropdown-item desplegable" href="#"></a>Cerrar Sesión</li>
-                            <li><a class="dropdown-item desplegable" href="#">Editar Perfil</a></li>
-                            <li><a class="dropdown-item desplegable" href="#">Agregar Publicación</a></li>
+                            <li><a class="dropdown-item desplegable" href="logout.php">Cerrar Sesión</a></li>
+                            <li><a class="dropdown-item desplegable" href="perfil.php">Mi Perfil</a></li>
+                            <li><a class="dropdown-item desplegable" href="editar.php">Editar Perfil</a></li>
+                            <li><a class="dropdown-item desplegable" href="crear.php">Agregar Publicación</a></li>
                         </ul>
                     <?php }else{ ?>
                         <a class="btn dropdown-toggle boton-desplegable" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" >
-                            Iniciar Sesión
+                            Usuario
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark desplegable" style="background-color: white!important;color: black!important;" aria-labelledby="dropdownMenuButton2">
-                            <li><a class="dropdown-item desplegable" href="#">Registrarme</a></li>
+                            <li><a class="dropdown-item desplegable" href="login.php">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item desplegable" href="register.php">Registrarme</a></li>
                         </ul>
-                    <?= } ?>
+                    <?php } ?>
                 </div>
-            <?php
-            if ($logued) {
-                echo '<a href="logout.php" class=" a1 centrar toro">Cerrar sesión</a>';
-            } else {
-                echo '<a href="login.php" class=" a1 centrar toro">Iniciar sesión</a>';
-            }
-            ?>
             <div class="a1 centrar sub14"><i class="bi bi-arrow-bar-right"></i>EMPRESAS</div>
         </div>
     </div>

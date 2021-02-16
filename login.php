@@ -14,6 +14,7 @@ if (isset($_POST) && count($_POST) == 2) {
             $password = clean($_POST['password']);
             $sql = 'SELECT * FROM ' . $tables['users'] . '
                     WHERE
+                    Enabled = 1 AND
                         `Email`       = ' . $email;
             if (Existe($sql)) {
                 $user = Consulta($sql)[0];

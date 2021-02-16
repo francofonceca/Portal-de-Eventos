@@ -56,6 +56,7 @@ function INSERT($tabla, $columnas, $valores)
 function UPDATE($tabla, $valores, $donde)
 {
     $sql = "UPDATE " . $tabla . " SET " . $valores . " WHERE " . $donde;
+    echo $sql;
     $lookup = $GLOBALS['db']->query($sql);
     return $lookup;
 }

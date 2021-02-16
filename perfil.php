@@ -80,7 +80,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-danger">Dar de baja</button>
+                <a class="btn btn-danger" href='baja.php'>Dar de baja</a>
             </div>
         </div>
     </div>
