@@ -19,7 +19,7 @@
                     }else{
                         echo '
                             <div class="col-sm-12 col-lg-3 p-2 col-md-6">
-                                <div class="card img-card">
+                                <div class="card img-card" style="background-image: url(img/origen.jpg);">
                                     <div class="card-body">
                                         <h2 class="card-title margin-auto gris1">'.$event['Lounge'].'</h2>
                                     </div>
