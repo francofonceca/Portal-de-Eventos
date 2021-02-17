@@ -19,7 +19,7 @@ $scehduleFilter = isset($_POST['scehduleFilter']) && is_numeric($_POST['scehdule
 $promoFilter = isset($_POST['promoFilter']) && is_numeric($_POST['promoFilter'])  ? $_POST['promoFilter']:null;
 
 $zone = getSomething($tables['zones'], 'ZoneID', $selectSearch);
-$result = getPost(null, $selectSearch, trim($search),$loungeFilter,$eventFilter);
+$result = getPost(null, $selectSearch, trim($search),$loungeFilter,$eventFilter,$capacityFilter);
 
 $posts = $result['posts'];
 
@@ -55,7 +55,7 @@ $posts = $result['posts'];
                     'option' => 'Más 200 invitados'],
                 ]
             ?>
-                <?= getSelect(null,null,null,'value','option',$loungeFilter,'select-filter','CAPACIDAD',$selectArray,'capacityFilter')?>
+                <?= getSelect(null,null,null,'value','option',$capacityFilter,'select-filter','CAPACIDAD',$selectArray,'capacityFilter')?>
                 <?php
                 $selectArray = [
                     ['value' => '10-13',
@@ -68,7 +68,6 @@ $posts = $result['posts'];
                     'option' => '08 a 20'],
                 ]
             ?>
-                <?= getSelect(null,null,null,'value','option',$capacityFilter,'select-filter','HORARIO',$selectArray,'scehduleFilter')?>
                 
                 <input type="hidden" name="search" value='<?=$_POST['search']?>' />
                 <input type="hidden" name="selectSearch" value='<?=$_POST['selectSearch']?>' />

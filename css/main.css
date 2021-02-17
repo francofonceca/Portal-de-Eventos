@@ -1,0 +1,16 @@
+.dropdown-menu-dark,
+.dropdown-item.active,
+.desplegable:hover,
+.desplegable:active {
+    background-color: rgba(170, 143, 83, 1)!important;
+    color: white!important;
+}
+
+.desplegable {
+    color: black!important;
+    width: 300px!important;
+}
+
+.boton-desplegable:focus {
+    box-shadow: 0 0 0 0.25rem rgba(170, 143, 83, 1)!important;
+}

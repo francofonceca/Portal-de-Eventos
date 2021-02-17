@@ -60,7 +60,7 @@ function getSelect($table,$orderColumn=null,$order=null,$selectValue,$selectShow
 }
 //** FIN DE GET SELECT*/
 
-function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$EventID = null)
+function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$EventID = null,$Capacity = null,$Scehdule = null)
 {
     $where = '';
     if (verify($id)) {
@@ -70,6 +70,22 @@ function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$Ev
         $whereVec[] = verify($Title) ? ' posts.Title LIKE "%' . $Title . '%" ' : null;
         $whereVec[] = verify($LoungeID) ? ' post_lounge.LoungeID = ' . $LoungeID . ' ' : null;
         $whereVec[] = verify($EventID) ? ' post_events.EventID = ' . $EventID . ' ' : null;
+        if (isset($Capacity)) {
+            switch ($Capacity) {
+                case '50':
+                    $whereVec[] = verify($Capacity) ? ' (posts.GuestsLimitsInit <= 50) ' : null;
+                    break;
+                case '100':
+                    $whereVec[] = verify($Capacity) ? ' (posts.GuestsLimitsInit >= 51 AND posts.GuestsLimitsLimit = 100) ' : null;
+                    break;
+                case '200':
+                    $whereVec[] = verify($Capacity) ? ' (posts.GuestsLimitsInit >= 100 AND posts.GuestsLimitsLimit = 200) ' : null;
+                    break;
+                default:
+                $whereVec[] = verify($Capacity) ? ' (posts.GuestsLimitsInit > 200) ' : null;
+                    break;
+            }
+        }
     }
     foreach ($whereVec as $key => $item) {
         if (isset($whereVec[$key + 1])) {

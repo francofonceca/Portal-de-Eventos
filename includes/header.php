@@ -16,6 +16,7 @@ if (($logued && isset($register)) || (!$logued && isset($profile))) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/<?= isset($file) ? $file : 'index' ?>.css">
+    <link rel="stylesheet" href="css/main.css">
     <?php if (isset($salones)) : ?>
         <link rel="stylesheet" href="css/publicacion.css">
     <?php endif; ?>
@@ -35,7 +36,7 @@ if (($logued && isset($register)) || (!$logued && isset($profile))) {
                 </a>
             </div>
             <div class=" b3 fila">
-                <div class=" a1 centrar toro">CATEGORIAS</div>
+                <div class=" a1 centrar toro"><a href='#' class=" a1 centrar toro">CATEGORIAS</a></div>
                 <div class=" a1 centrar toro">
                     <div class="dropdown">
                         <a <?= !isset($salones) ? ' class=" a1 centrar toro" href="salones.php"' : 'class="btn dropdown-toggle boton-desplegable" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" ' ?>>
@@ -54,7 +55,8 @@ if (($logued && isset($register)) || (!$logued && isset($profile))) {
                     </div>
                 </div>
             </div>
-            <div class=" a1 centrar toro">IMAGEN PERSONAL</div>
+            <div class=" a1 centrar toro">
+                <a href='imagen.php' class=" a1 centrar toro">IMAGEN PERSONAL</a></div>
                 <a href='contacto.php' class=" a1 centrar toro">
                     CONTACTO
                 </a>

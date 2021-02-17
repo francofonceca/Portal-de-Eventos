@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 <?php $title='Contacto';$file='contacto';?>
 

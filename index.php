@@ -12,14 +12,14 @@
         <div class="container">
             <form class="row align-items-start col-lg-10 ms-md-auto" method="POST" action="resultados.php">
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-            <?= getSelect($tables['zones'],'Zone','ASC','ZoneID','Zone')?>
+                    <?= getSelect($tables['zones'],'Zone','ASC','ZoneID','Zone')?>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
                     <input type="text" placeholder="¿Qué estás buscando?" name="search"
                         <?= isset($search) ? 'value="' . $search . '"' : '' ?>>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <button  type='submit' class="btn btn-secondary btn-tam">
+                    <button type='submit' class="btn btn-secondary btn-tam">
                         Buscar
                     </button>
                 </div>
@@ -83,7 +83,9 @@
 <div class="centrar h200 oh img1">
     <div class=" h-80 col-12 oh oro60 ">
         <br>
-        <h2 class="centrar top margin-auto">Eventos</h2>
+        <a href='eventos.php' class='text-white'>
+            <h2 class="centrar top margin-auto">Eventos</h2>
+        </a>
     </div>
 </div>
 <br>

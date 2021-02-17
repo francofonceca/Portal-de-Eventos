@@ -14,6 +14,7 @@
     <form class="col-lg-7" method="POST" action="resultados.php">
         <div class="text-center">
             <?php $selectSearch = isset($selectSearch) ? $selectSearch:null;?>
+            <?php $selectSearch = isset($_POST['zoneFilter']) && is_numeric($_POST['zoneFilter']) ? $_POST['zoneFilter']:$selectSearch;?>
             <?= getSelect($tables['zones'],'Zone','ASC','ZoneID','Zone',$selectSearch)?>
             <input type="text" placeholder="¿Qué estás buscando?" name="search"
                 <?= isset($search) ? 'value="' . $search . '"' : '' ?>>
