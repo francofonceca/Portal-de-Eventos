@@ -1,6 +1,13 @@
 <?php $title='Perfil';$file='perfil';$profile = true;?>
 
 <?php include_once('includes/header.php'); ?>
+<?php
+$result = getPost(null, null, null,null,null,null,null,$_SESSION['email']);
+if (isset($result)) {
+    $posts = $result['posts'];
+}
+
+?>
 
 <div class="col-lg-12 text-center py-5 textgris">
     <hr>
@@ -11,8 +18,10 @@
 <div class="row">
     <div class="col-lg-8 col-md-8 text-white"></div>
     <div class="col-lg-4 col-md-4 col-sm-12 pb-2">
-        <a href="crear.html" alt="Agregar Publicación" class="btn btn-secondary text-white"><i class="bi bi-plus"></i> Agregar Publicación</a>
-        <button class="btn btn-secondary text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Dar de baja mi cuenta</button>
+        <a href="crear.html" alt="Agregar Publicación" class="btn btn-secondary text-white"><i class="bi bi-plus"></i>
+            Agregar Publicación</a>
+        <button class="btn btn-secondary text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Dar de baja
+            mi cuenta</button>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12 borde">
         <h4 class="p-3 ">Tus datos personales:</h4>
@@ -36,33 +45,42 @@
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12 borde">
         <h4 class="p-3 pb-5">Tus publicaciones:</h4>
+        <?php
+            if (isset($posts)) {
+                foreach ($posts as $key => $post) {
+                    ?>
         <div class="col-lg-12 row align-items-start  bloque p-2  color-click">
             <div class="col-lg-8 col-md-8 col-sm-12">
-                <p><i class="bi bi-geo-alt"></i><strong>Moreno, zona oeste de GBA.</strong></p>
-                <h3>Estancia Los Tordillos </h3>
-                <h6>Desde 1985 que abrimos nuestras puertas para recibir a una clientela sensible a la buena mesa, concretando con éxito sus reuniones sociales, encuentros de negocios, casamientos y reuniones de trabajo.
-                </h6>
-                <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i></button>
-                <button class="btn btn-secondary"><i class="bi bi-pencil"></i></button>
-                <button class="btn btn-secondary"><i class="bi bi-eye"></i></button>
+                <p><i class="bi bi-geo-alt"></i><strong><?=$post['Zone']?></strong></p>
+                <h3><?=$post['Title']?></h3>
+                <h6><?=substr($post['Description'], 0, 200)?></h6>
+                    <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i></button>
+                    <button class="btn btn-secondary"><i class="bi bi-pencil"></i></button>
+                    <button class="btn btn-secondary"><i class="bi bi-eye"></i></button>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="img/estancia_la_linda-quintas_y_estancias-buenos_aires-1209083617_15086_grande.jpg" class=" pt-3" style="width: 100%;height: 200px;">
+                <img src="img/<?=$post['Image']?>" class=" pt-3" style="width: 100%;height: 200px;">
             </div>
         </div>
         <hr>
+        <?php }
+            }
+        ?>
         <div class="col-lg-12 row align-items-start  bloque p-2  color-click">
             <div class="col-lg-8 col-md-8 col-sm-12">
                 <p><i class="bi bi-geo-alt"></i><strong>Moreno, zona oeste de GBA.</strong></p>
                 <h3>Estancia Los Tordillos </h3>
-                <h6>Desde 1985 que abrimos nuestras puertas para recibir a una clientela sensible a la buena mesa, concretando con éxito sus reuniones sociales, encuentros de negocios, casamientos y reuniones de trabajo.
+                <h6>Desde 1985 que abrimos nuestras puertas para recibir a una clientela sensible a la buena mesa,
+                    concretando con éxito sus reuniones sociales, encuentros de negocios, casamientos y reuniones de
+                    trabajo.
                 </h6>
                 <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i></button>
                 <button class="btn btn-secondary"><i class="bi bi-pencil"></i></button>
                 <button class="btn btn-secondary"><i class="bi bi-eye"></i></button>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="img/estancia_la_linda-quintas_y_estancias-buenos_aires-1209083617_15086_grande.jpg" class=" pt-3" style="width: 100%;height: 200px;">
+                <img src="img/estancia_la_linda-quintas_y_estancias-buenos_aires-1209083617_15086_grande.jpg"
+                    class=" pt-3" style="width: 100%;height: 200px;">
             </div>
         </div>
     </div>

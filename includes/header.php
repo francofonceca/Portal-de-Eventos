@@ -23,6 +23,7 @@ if (($logued && isset($register)) || (!$logued && isset($profile))) {
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Portal de Eventos - <?= isset($title) ? $title : '' ?></title>
 </head>
 

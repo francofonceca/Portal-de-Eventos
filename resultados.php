@@ -15,13 +15,12 @@ $zoneFilter = isset($_POST['zoneFilter']) && is_numeric($_POST['zoneFilter']) ? 
 $eventFilter = isset($_POST['eventFilter']) && is_numeric($_POST['eventFilter'])  ? $_POST['eventFilter']:null;
 $loungeFilter = isset($_POST['loungeFilter']) && is_numeric($_POST['loungeFilter'])  ? $_POST['loungeFilter']:null;
 $capacityFilter = isset($_POST['capacityFilter']) && is_numeric($_POST['capacityFilter'])  ? $_POST['capacityFilter']:null;
-$scehduleFilter = isset($_POST['scehduleFilter']) && is_numeric($_POST['scehduleFilter'])  ? $_POST['scehduleFilter']:null;
-$promoFilter = isset($_POST['promoFilter']) && is_numeric($_POST['promoFilter'])  ? $_POST['promoFilter']:null;
 
 $zone = getSomething($tables['zones'], 'ZoneID', $selectSearch);
 $result = getPost(null, $selectSearch, trim($search),$loungeFilter,$eventFilter,$capacityFilter);
-
-$posts = $result['posts'];
+if (isset($result)) {
+    $posts = $result['posts'];
+}
 
 
 ?>

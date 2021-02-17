@@ -23,7 +23,7 @@ if (isset($_POST) && count($_POST) == 2) {
                     $_SESSION['surname'] = $user['Surname'];
                     $_SESSION['email'] = $user['Email'];
                     $_SESSION['phone'] = $user['Phone'];
-                    redirect('index');
+                    $pass = true;
                 }else{
                     $error = "Contraseña incorrecta";
                 }
@@ -67,7 +67,8 @@ if (isset($_POST) && count($_POST) == 2) {
                 <label for="email" class="form-label toro">
                     <h4>Correo Electronico</h4>
                 </label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" <?= isset($email) ? "value=$email" : "" ?>>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                    <?= isset($email) ? "value=$email" : "" ?>>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label toro">
@@ -87,4 +88,32 @@ if (isset($_POST) && count($_POST) == 2) {
         </form>
     </div>
 </div>
+<?php
+if (isset($pass)) {?>
+<!-- ACA EMPIEZA EL HTML DEL TOAST, PUEDE ESTAR EN CUALQUIER LADO, SIEMPRE SE VA A MOSTRAR EN EL TOP DE LA PANTALLA -->
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 5">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Portal de Eventos</strong>
+            <small>Ahora...</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Bienvenido a Portal de Eventos!.
+        </div>
+    </div>
+</div>
+<!-- ACA ESTA EL SCRIPT QUE TENES QUE EJECUTAR CUANDO EL PERUANO INICIA SESIÓN -->
+<script>
+$(document).ready(function() {
+            $("#liveToast").toast('show');
+    setTimeout(function() {
+        window.location.href = "index.php"
+        }, 3000)
+        ;
+
+})
+</script>
+<?php }
+?>
 <?php include_once('includes/footer.php'); ?>

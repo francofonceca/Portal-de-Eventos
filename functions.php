@@ -60,12 +60,13 @@ function getSelect($table,$orderColumn=null,$order=null,$selectValue,$selectShow
 }
 //** FIN DE GET SELECT*/
 
-function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$EventID = null,$Capacity = null,$Scehdule = null)
+function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$EventID = null,$Capacity = null,$Scehdule = null,$UserID = null)
 {
     $where = '';
     if (verify($id)) {
         $where = ' posts.PostID = ' . $id;
     } else {
+        $whereVec[] = verify($UserID) ? ' users.Email = "' . $UserID . '" ' : null;
         $whereVec[] = verify($ZoneID) ? ' posts.ZoneID = ' . $ZoneID . ' ' : null;
         $whereVec[] = verify($Title) ? ' posts.Title LIKE "%' . $Title . '%" ' : null;
         $whereVec[] = verify($LoungeID) ? ' post_lounge.LoungeID = ' . $LoungeID . ' ' : null;
@@ -107,10 +108,13 @@ function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$Ev
             LEFT JOIN ' . $GLOBALS['tables']['post_filter'] . ' ON posts.PostID = post_filter.PostID
 
             LEFT JOIN ' . $GLOBALS['tables']['post_events'] . ' ON posts.PostID = post_events.PostID
+
+            LEFT JOIN '. $GLOBALS['tables']['users'].' ON posts.UserID = users.UserID
             
             ' . $where.'
             GROUP BY PostID
             ';
+            var_dump($sql);
     $posts = Consulta($sql);
 
     $whereID = '';

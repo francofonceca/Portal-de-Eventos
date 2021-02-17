@@ -47,8 +47,28 @@
 </div>
 <!-- FIN FOOTER -->
 </div>
+
+<?php
+if (isset($pass)) {?>
+<!-- ACA EMPIEZA EL HTML DEL TOAST, PUEDE ESTAR EN CUALQUIER LADO, SIEMPRE SE VA A MOSTRAR EN EL TOP DE LA PANTALLA -->
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 5">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Portal de Eventos</strong>
+            <small>Ahora...</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Adios!.
+        </div>
+    </div>
+</div>
+<?php }
+?>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

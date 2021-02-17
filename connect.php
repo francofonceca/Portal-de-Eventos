@@ -56,7 +56,6 @@ function INSERT($tabla, $columnas, $valores)
 function UPDATE($tabla, $valores, $donde)
 {
     $sql = "UPDATE " . $tabla . " SET " . $valores . " WHERE " . $donde;
-    echo $sql;
     $lookup = $GLOBALS['db']->query($sql);
     return $lookup;
 }
@@ -72,7 +71,6 @@ function Consulta($sql)
     if ($lookup = $GLOBALS['db']->query($sql)) {
         return $lookup->fetchall();
     } else {
-        echo $sql;
         print ERROR;
     }
 }

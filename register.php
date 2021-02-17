@@ -20,7 +20,7 @@ if (isset($_POST) && count($_POST) == 6) {
                 $phone = clean($_POST['phone']);
                 $email = clean($_POST['email']);
                 $password = clean($_POST['password']);
-                $sql = 'SELECT "Email" FROM ' . $tables['users'] . '
+                $sql = 'SELECT UserID FROM ' . $tables['users'] . '
                         WHERE
                             `Email`       = ' . $email;
                 if (!Existe($sql)) {
@@ -33,7 +33,7 @@ if (isset($_POST) && count($_POST) == 6) {
                         $_SESSION['surname'] = $surname;
                         $_SESSION['email'] = $email;
                         $_SESSION['phone'] = $phone;
-                        redirect('index');
+                        $pass = true;
                     }else{
                         $error = "Error al registrarse, revise sus datos o contacte al técnico";
                     }
@@ -136,4 +136,32 @@ if (isset($_POST) && count($_POST) == 6) {
     </div>
 </div>
 
+<?php
+if (isset($pass)) {?>
+<!-- ACA EMPIEZA EL HTML DEL TOAST, PUEDE ESTAR EN CUALQUIER LADO, SIEMPRE SE VA A MOSTRAR EN EL TOP DE LA PANTALLA -->
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 5">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Portal de Eventos</strong>
+            <small>Ahora...</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Bienvenido a Portal de Eventos!.
+        </div>
+    </div>
+</div>
+<!-- ACA ESTA EL SCRIPT QUE TENES QUE EJECUTAR CUANDO EL PERUANO INICIA SESIÓN -->
+<script>
+$(document).ready(function() {
+            $("#liveToast").toast('show');
+    setTimeout(function() {
+        window.location.href = "index.php"
+        }, 3000)
+        ;
+
+})
+</script>
+<?php }
+?>
 <?php include_once('includes/footer.php'); ?>
