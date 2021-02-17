@@ -60,11 +60,11 @@ function getSelect($table,$orderColumn=null,$order=null,$selectValue,$selectShow
 }
 //** FIN DE GET SELECT*/
 
-function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$EventID = null,$Capacity = null,$Scehdule = null,$UserID = null)
+function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$EventID = null,$Capacity = null,$UserID = null)
 {
     $where = '';
     if (verify($id)) {
-        $where = ' posts.PostID = ' . $id;
+        $where = ' where  posts.PostID = ' . $id;
     } else {
         $whereVec[] = verify($UserID) ? ' users.Email = "' . $UserID . '" ' : null;
         $whereVec[] = verify($ZoneID) ? ' posts.ZoneID = ' . $ZoneID . ' ' : null;
@@ -87,16 +87,19 @@ function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$Ev
                     break;
             }
         }
-    }
-    foreach ($whereVec as $key => $item) {
-        if (isset($whereVec[$key + 1])) {
-            $where .=  $item . ' AND ';
-        }else if(verify($item)){
-            $where .= ' ' . $item;
+        
+        foreach ($whereVec as $key => $item) {
+            if (verify($item)) {
+                if (isset($whereVec[$key + 1])) {
+                    $where .=  $item . ' AND ';
+                }else if(verify($item)){
+                    $where .= ' ' . $item;
+                }
+            }
         }
-    }
 
-    $where = strlen($where) > 0 ? 'WHERE ' . $where : '';
+        $where = strlen($where) > 0 ? 'WHERE ' . $where : '';
+    }
     $sql = 'SELECT posts.*,zones.Zone
             FROM ' . $GLOBALS['tables']['posts'] . '
             INNER JOIN ' . $GLOBALS['tables']['zones'] . ' ON zones.ZoneID = posts.ZoneID
@@ -114,7 +117,6 @@ function getPost($id = null, $ZoneID = null, $Title = null, $LoungeID = null,$Ev
             ' . $where.'
             GROUP BY PostID
             ';
-            var_dump($sql);
     $posts = Consulta($sql);
 
     $whereID = '';

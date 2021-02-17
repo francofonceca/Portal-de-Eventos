@@ -2,7 +2,7 @@
 
 <?php include_once('includes/header.php'); ?>
 <?php
-$result = getPost(null, null, null,null,null,null,null,$_SESSION['email']);
+$result = getPost(null, null, null,null,null,null,$_SESSION['email']);
 if (isset($result)) {
     $posts = $result['posts'];
 }

@@ -84,7 +84,9 @@ if (isset($result)) {
                     <div class="col-lg-12 row align-items-start borde bloque pb-2">
                         <div class="col-lg-8 ">
                             <p><i class="bi bi-geo-alt"></i><strong><?=$post['Zone']?></strong></p>
-                            <h3><?=$post['Title']?></h3>
+                            <a href='publicacion.php?PostID=<?=$post['PostID']?>' class='text-dark'>
+                                <h3><?=$post['Title']?></h3>
+                            </a>
                             <h6><?=substr($post['Description'], 0, 200)?>
                             </h6>
                             <button class="btn btn-secondary btn-sm">+</button>
