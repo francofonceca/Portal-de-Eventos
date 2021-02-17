@@ -52,11 +52,16 @@ if (isset($result)) {
         <div class="col-lg-12 row align-items-start  bloque p-2  color-click">
             <div class="col-lg-8 col-md-8 col-sm-12">
                 <p><i class="bi bi-geo-alt"></i><strong><?=$post['Zone']?></strong></p>
-                <h3><?=$post['Title']?></h3>
+                <a href='publicacion.php?PostID=<?=$post['PostID']?>' class='text-dark'>
+                    <h3><?=$post['Title']?></h3>
+                </a>
                 <h6><?=substr($post['Description'], 0, 200)?></h6>
-                    <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i></button>
-                    <button class="btn btn-secondary"><i class="bi bi-pencil"></i></button>
+                <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i></button>
+                <button class="btn btn-secondary"><i class="bi bi-pencil"></i></button>
+                
+                <a href='publicacion.php?PostID=<?=$post['PostID']?>' class='text-dark'>
                     <button class="btn btn-secondary"><i class="bi bi-eye"></i></button>
+                </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <img src="img/<?=$post['Image']?>" class=" pt-3" style="width: 100%;height: 200px;">
@@ -66,23 +71,6 @@ if (isset($result)) {
         <?php }
             }
         ?>
-        <div class="col-lg-12 row align-items-start  bloque p-2  color-click">
-            <div class="col-lg-8 col-md-8 col-sm-12">
-                <p><i class="bi bi-geo-alt"></i><strong>Moreno, zona oeste de GBA.</strong></p>
-                <h3>Estancia Los Tordillos </h3>
-                <h6>Desde 1985 que abrimos nuestras puertas para recibir a una clientela sensible a la buena mesa,
-                    concretando con éxito sus reuniones sociales, encuentros de negocios, casamientos y reuniones de
-                    trabajo.
-                </h6>
-                <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i></button>
-                <button class="btn btn-secondary"><i class="bi bi-pencil"></i></button>
-                <button class="btn btn-secondary"><i class="bi bi-eye"></i></button>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="img/estancia_la_linda-quintas_y_estancias-buenos_aires-1209083617_15086_grande.jpg"
-                    class=" pt-3" style="width: 100%;height: 200px;">
-            </div>
-        </div>
     </div>
 </div>
 <!-- Modal -->
